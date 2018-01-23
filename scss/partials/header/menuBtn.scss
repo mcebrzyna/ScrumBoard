@@ -1,0 +1,22 @@
+.menu-btn{
+  margin:0 15px 0 25px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border: 1px solid $border-color;
+
+  .icon-bar{
+    display: block;
+    width: 18px;
+    border-bottom: 2px solid white;
+    border-radius: 1px;
+    margin: 3px 0 0 0;
+  }
+
+  .icon-bar:first-child{
+    margin: 0;
+  }
+
+  &:hover{
+    border-color: $link-color;
+  }
+}

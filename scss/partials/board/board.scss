@@ -1,0 +1,12 @@
+@import "./subBoards";
+@import "./members";
+
+.board {
+  display: flex;
+  align-items: stretch;
+
+  .main-width{
+    display: flex;
+    flex-direction: row;
+  }
+}

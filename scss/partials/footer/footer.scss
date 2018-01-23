@@ -1,0 +1,38 @@
+@import "../../modules/colors";
+
+footer{
+  background-color: $second-color;
+  color: lighten($second-color, 10%);
+
+  .main-width{
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerLogo{
+      font-family: 'Patua One', sans-serif;
+      font-size: 26px;
+      margin: 0 0 0 20px;
+    }
+
+    .copyrights{
+      font-size: 14px;
+      margin:0 20px 0 0;
+    }
+  }
+}
+
+.socials{
+  width: 65px;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  .fa{
+    cursor: pointer;
+
+    &:hover{
+      color: lighten($second-color, 20%);
+    }
+  }
+}
