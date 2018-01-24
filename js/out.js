@@ -27703,7 +27703,7 @@ var Board = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.state = {
             toDo: [],
             backlog: [],
             inProgress: [],
@@ -27729,6 +27729,51 @@ var Board = function (_React$Component) {
                 done: data.done,
                 loaded: true
             });
+        }, _this.onDragStart = function (ev) {
+            var boundingClientRect = void 0;
+
+            if (ev.target.className.indexOf('task-title') === -1) {
+                return null;
+            }
+
+            _this.draggedEl = ev.target.parentNode;
+            boundingClientRect = _this.draggedEl.getBoundingClientRect();
+
+            _this.grabPointY = boundingClientRect.top - ev.clientY;
+            _this.grabPointX = boundingClientRect.left - ev.clientX;
+        }, _this.onDrag = function (ev) {
+            var posX = void 0,
+                posY = void 0;
+
+            if (!_this.draggedEl) {
+                return null;
+            }
+
+            posX = ev.clientX + _this.grabPointX;
+            posY = ev.clientY + _this.grabPointY;
+
+            if (posX < 0) {
+                posX = 0;
+            }
+            if (posY < 0) {
+                posY = 0;
+            }
+
+            _this.draggedEl.style.position = 'absolute';
+            _this.draggedEl.style.left = posX + 'px';
+            _this.draggedEl.style.top = posY + 'px';
+        }, _this.onDragEnd = function (ev) {
+            _this.draggedEl = null;
+            _this.grabPointX = null;
+            _this.grabPointY = null;
+
+            ev.target.parentNode.style.display = "none";
+        }, _this.checkActiveCol = function (ev) {
+            _this.setState({
+                activeCol: ev.target.id
+            }, function () {
+                return console.log(_this.state.activeCol);
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -27750,6 +27795,13 @@ var Board = function (_React$Component) {
         value: function render() {
             var _this3 = this;
 
+            var boardProps = {
+                checkCol: this.checkActiveCol,
+                onDragStart: this.onDragStart,
+                onDrag: this.onDrag,
+                onDragEnd: this.onDragEnd
+            };
+
             if (!this.state.loaded) {
                 return _react2.default.createElement(
                     'div',
@@ -27767,11 +27819,11 @@ var Board = function (_React$Component) {
                     'div',
                     { className: 'main-width' },
                     _react2.default.createElement(_members2.default, { title: 'Members' }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'backLog', title: 'Backlog', table: this.state.backlog }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'toDo', title: 'To-Do', table: this.state.toDo }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'inProgress', title: 'In Progress', table: this.state.inProgress }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'inReview', title: 'In Review', table: this.state.inReview }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'completed', title: 'Done', table: this.state.done })
+                    _react2.default.createElement(_subBoard2.default, { id: 'backLog', title: 'Backlog', table: this.state.backlog, boardProps: boardProps }),
+                    _react2.default.createElement(_subBoard2.default, { id: 'toDo', title: 'To-Do', table: this.state.toDo, boardProps: boardProps }),
+                    _react2.default.createElement(_subBoard2.default, { id: 'inProgress', title: 'In Progress', table: this.state.inProgress, boardProps: boardProps }),
+                    _react2.default.createElement(_subBoard2.default, { id: 'inReview', title: 'In Review', table: this.state.inReview, boardProps: boardProps }),
+                    _react2.default.createElement(_subBoard2.default, { id: 'completed', title: 'Done', table: this.state.done, boardProps: boardProps })
                 )
             );
         }
@@ -27831,12 +27883,14 @@ var SubBoard = function (_React$Component) {
             }
 
             return list.map(function (i) {
-                return _react2.default.createElement(_task2.default, { id: i.id,
+                return _react2.default.createElement(_task2.default, {
+                    id: i.id,
                     title: i.title,
                     description: i.description,
                     member: i.member,
                     priority: i.priority,
-                    status: i.status
+                    status: i.status,
+                    boardProps: _this.props.boardProps
                 });
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -27849,7 +27903,7 @@ var SubBoard = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'board-sub', id: this.props.id },
+                { className: 'board-sub', id: this.props.id, onMouseEnter: this.props.boardProps.checkCol },
                 _react2.default.createElement(
                     'div',
                     { className: 'board-sub-title' },
@@ -27963,7 +28017,7 @@ var Task = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Task.__proto__ || Object.getPrototypeOf(Task)).call.apply(_ref, [this].concat(args))), _this), _this.draggedEl = null, _this.colorPicker = function (priority) {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Task.__proto__ || Object.getPrototypeOf(Task)).call.apply(_ref, [this].concat(args))), _this), _this.colorPicker = function (priority) {
             if (priority === 'low') {
                 return '#bae19a';
             } else if (priority === 'mid') {
@@ -27971,51 +28025,13 @@ var Task = function (_React$Component) {
             } else if (priority === 'high') {
                 return '#ff857d';
             } else return 'grey';
-        }, _this.onDragStart = function (ev) {
-            var boundingClientRect = void 0;
-
-            if (ev.target.className.indexOf('task-title') === -1) {
-                return null;
-            }
-
-            _this.draggedEl = ev.target.parentNode;
-            boundingClientRect = _this.draggedEl.getBoundingClientRect();
-
-            _this.grabPointY = boundingClientRect.top - ev.clientY;
-            _this.grabPointX = boundingClientRect.left - ev.clientX;
-        }, _this.onDrag = function (ev) {
-            var posX = void 0,
-                posY = void 0;
-
-            if (!_this.draggedEl) {
-                return null;
-            }
-
-            posX = ev.clientX + _this.grabPointX;
-            posY = ev.clientY + _this.grabPointY;
-
-            if (posX < 0) {
-                posX = 0;
-            }
-            if (posY < 0) {
-                posY = 0;
-            }
-
-            _this.draggedEl.style.position = 'absolute';
-            _this.draggedEl.style.left = posX + 'px';
-            _this.draggedEl.style.top = posY + 'px';
-        }, _this.onDragEnd = function () {
-            _this.draggedEl = null;
-            _this.grabPointX = null;
-            _this.grabPointY = null;
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Task, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            document.addEventListener('mousemove', this.onDrag);
-            document.addEventListener('mouseup', this.onDragEnd);
+            document.addEventListener('mousemove', this.props.boardProps.onDrag);
         }
     }, {
         key: 'render',
@@ -28026,7 +28042,10 @@ var Task = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'task', style: style, onMouseDown: this.onDragStart, key: this.props.id },
+                { className: 'task',
+                    style: style,
+                    onMouseDown: this.props.boardProps.onDragStart,
+                    onMouseUp: this.props.boardProps.onDragEnd },
                 _react2.default.createElement(
                     'h2',
                     { className: 'task-title' },
