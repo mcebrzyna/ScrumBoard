@@ -1,0 +1,76 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Task 1",
+      "description": "Zorganizować colę dla pracowników",
+      "member": "Michał",
+      "priority": "low",
+      "status": "toDo"
+    },
+    {
+      "id": 2,
+      "title": "Task 2",
+      "description": "Pójść na obiad punktualnie o 12:45",
+      "member": "Mateusz",
+      "priority": "mid",
+      "status": "inReview"
+    },
+    {
+      "id": 3,
+      "title": "Task 3",
+      "description": "Skończyć projekt, żeby działał",
+      "member": "Jakub",
+      "priority": "high",
+      "status": "toDo"
+    },
+    {
+      "id": 4,
+      "title": "Task 4",
+      "description": "Zorganizować colę dla pracowników",
+      "member": "Michał",
+      "priority": "low",
+      "status": "inProgress"
+    },
+    {
+      "id": 5,
+      "title": "Task 5",
+      "description": "Pójść na obiad punktualnie o 12:45",
+      "member": "Mateusz",
+      "priority": "mid",
+      "status": "toDo"
+    },
+    {
+      "id": 6,
+      "title": "Task 6",
+      "description": "Skończyć projekt, żeby działał",
+      "member": "Jakub",
+      "priority": "high",
+      "status": "backlog"
+    },
+    {
+      "id": 7,
+      "title": "Task 7",
+      "description": "Zorganizować colę dla pracowników",
+      "member": "Michał",
+      "priority": "mid",
+      "status": "inProgress"
+    },
+    {
+      "id": 8,
+      "title": "Task 8",
+      "description": "Pójść na obiad punktualnie o 12:45",
+      "member": "Mateusz",
+      "priority": "mid",
+      "status": "done"
+    },
+    {
+      "id": 9,
+      "title": "Task 9",
+      "description": "Skończyć projekt, żeby działał",
+      "member": "Jakub",
+      "priority": "low",
+      "status": "backlog"
+    }
+  ]
+}

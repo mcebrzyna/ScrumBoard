@@ -1,0 +1,17 @@
+.task{
+  width: 140px;
+  margin: 5px;
+  padding: 0 20px;
+  border-radius: 10px;
+
+  .task-title{
+    padding:15px 0 ;
+    border-bottom: 1px solid #a5946f;
+  }
+
+  .task-description{
+    padding: 10px 0;
+    border-bottom: 1px solid #a5946f;
+  }
+}
+
