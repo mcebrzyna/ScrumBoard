@@ -25,9 +25,8 @@ class Board extends React.Component{
     componentDidMount(){
         fetch(this.url)
             .then(resp => resp.json())
-            .then(resp => {
-                this.loadTasks(resp);
-            }).catch(err => (console.log(err)))
+            .then(resp => this.loadTasksAndMembers(resp))
+            .catch(err => (console.log(err)))
     }
 
     switchTask = () => {
@@ -65,7 +64,7 @@ class Board extends React.Component{
         this.setState({
             [`${activeCol}`]: list1,
             [`${activeTask.dataset.status}`]: list2,
-        }/*, this.upDateJsonServ(obj)*/);
+        }, this.upDateJsonServ(obj));
     };
 
     upDateJsonServ = (obj) => {
@@ -83,13 +82,18 @@ class Board extends React.Component{
             });
     };
 
-    loadTasks = (resp) => {
+    loadTasksAndMembers = (resp) => {
         const data = {};
+        const members = [];
         resp.forEach( i => {
             if(typeof data[i.status] === 'undefined'){
                 data[i.status] = []
             }
-            data[i.status].push(i)
+            data[i.status].push(i);
+
+            if(members.indexOf(i.member) === -1){
+                members.push(i.member);
+            }
         });
 
         this.setState({
@@ -98,6 +102,7 @@ class Board extends React.Component{
             inProgress: data.inProgress,
             inReview: data.inReview,
             done: data.done,
+            members: members,
             loaded: true,
         });
     };
@@ -193,6 +198,23 @@ class Board extends React.Component{
         })
     };
 
+    filterMembers = (ev) => {
+        console.log(ev.target);
+        console.log(ev.target.dataset.member);
+
+        const tab1 = this.board.querySelectorAll(`.task`);
+        tab1.forEach( i => {
+            i.style.display = 'none';
+        });
+
+        const tab2 = this.board.querySelectorAll(`.task[data-name="${ev.target.dataset.member}"]`);
+        tab2.forEach( i => {
+            i.style.display = 'block';
+            console.log(tab2)
+        });
+
+    };
+
     render(){
         let boardProps = {
             onDragStart: this.onDragStart,
@@ -204,9 +226,9 @@ class Board extends React.Component{
             return <div>Loading</div>}
 
         return (
-            <section className='board'>
+            <section className='board' ref={(rel) => { this.board = rel;}}>
                 <div className='main-width'>
-                    <Members title='Members'/>
+                    <Members title='Members' members={this.state.members} filter={this.filterMembers}/>
                     <div className='subBoards-container'>
                         <SubBoard id='backlog' title='Backlog' table={this.state.backlog} boardProps={boardProps} />
                         <SubBoard id='toDo' title='To-Do' table={this.state.toDo} boardProps={boardProps}/>

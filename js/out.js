@@ -13677,7 +13677,7 @@ exports = module.exports = __webpack_require__(118)(false);
 
 
 // module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid #acb4b4; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #2e3434;\n  color: white; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      border: 1px solid orange;\n      padding: 5px 10px; }\n\nfooter {\n  background-color: #1170a4;\n  color: #1690d2;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 70px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #31a8ea; }\n\n.members {\n  background-color: #929292;\n  border-right: 1px solid #5f5f5f; }\n  .members .members-title {\n    color: #8ecff3;\n    font-weight: bold;\n    font-size: 16px;\n    width: 120px;\n    background: #1170a4;\n    height: 40px;\n    line-height: 40px;\n    text-align: center;\n    border-bottom: 3px solid #0c5076;\n    border-right: 1px solid #0c5076; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  min-width: 240px;\n  z-index: 1;\n  margin: 0 10px; }\n\n.hidden {\n  max-width: 320px;\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex;\n  align-items: stretch; }\n  .board .main-width {\n    display: flex;\n    flex-direction: row; }\n    .board .main-width .subBoards-container {\n      display: flex;\n      flex-grow: 1; }\n      .board .main-width .subBoards-container .board-sub {\n        flex-grow: 1;\n        width: 150px;\n        background-color: #e2e4e6;\n        border-right: 1px solid #797979; }\n        .board .main-width .subBoards-container .board-sub .board-sub-title {\n          color: #8ecff3;\n          font-weight: bold;\n          font-size: 16px;\n          width: 100%;\n          min-width: 150px;\n          background: #1170a4;\n          height: 40px;\n          line-height: 40px;\n          text-align: center;\n          border-bottom: 3px solid #0c5076;\n          border-right: 1px solid #0c5076;\n          border-left: 1px solid #0c5076; }\n", ""]);
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid #acb4b4; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #2e3434;\n  color: white; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      border: 1px solid orange;\n      padding: 5px 10px; }\n\nfooter {\n  background-color: #1170a4;\n  color: #1690d2;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 70px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #31a8ea; }\n\n.members {\n  background-color: #929292;\n  border-right: 1px solid #5f5f5f; }\n  .members .members-title {\n    color: #8ecff3;\n    font-weight: bold;\n    font-size: 16px;\n    width: 120px;\n    background: #1170a4;\n    height: 40px;\n    line-height: 40px;\n    text-align: center;\n    border-bottom: 3px solid #0c5076;\n    border-right: 1px solid #0c5076; }\n  .members .member-container {\n    display: flex;\n    flex-direction: column; }\n  .members .member {\n    -webkit-box-shadow: 1px 1px 3px 0 #858585;\n    -moz-box-shadow: 1px 1px 3px 0 #858585;\n    box-shadow: 1px 1px 3px 0 #858585;\n    border-radius: 3px;\n    height: 40px;\n    margin: 10px 5px;\n    background-color: #cccccc;\n    display: flex;\n    justify-content: center;\n    line-height: 40px;\n    color: black;\n    cursor: pointer; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-low .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-mid .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-high .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-unDef .task-info .task-description p {\n        font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 65px 0 #858585;\n  -moz-box-shadow: 0 0 65px 0 #858585;\n  box-shadow: 0 0 65px 0 #858585;\n  min-width: 240px;\n  z-index: 1;\n  margin: 0 10px; }\n\n.hidden {\n  max-width: 320px;\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex;\n  align-items: stretch; }\n  .board .main-width {\n    display: flex;\n    flex-direction: row; }\n    .board .main-width .subBoards-container {\n      display: flex;\n      flex-grow: 1; }\n      .board .main-width .subBoards-container .board-sub {\n        flex-grow: 1;\n        width: 150px;\n        background-color: #e2e4e6;\n        border-right: 1px solid #797979; }\n        .board .main-width .subBoards-container .board-sub .board-sub-title {\n          color: #8ecff3;\n          font-weight: bold;\n          font-size: 16px;\n          width: 100%;\n          min-width: 150px;\n          background: #1170a4;\n          height: 40px;\n          line-height: 40px;\n          text-align: center;\n          border-bottom: 3px solid #0c5076;\n          border-right: 1px solid #0c5076;\n          border-left: 1px solid #0c5076; }\n", ""]);
 
 // exports
 
@@ -27750,7 +27750,7 @@ var Board = function (_React$Component) {
                 return i.id !== Number(activeTask.dataset.id);
             });
 
-            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + activeTask.dataset.status, list2), _this$setState));
+            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + activeTask.dataset.status, list2), _this$setState), _this.upDateJsonServ(obj));
         }, _this.upDateJsonServ = function (obj) {
             fetch(_this.url + '/' + _this.state.activeTask.dataset.id, {
                 headers: {
@@ -27764,13 +27764,18 @@ var Board = function (_React$Component) {
             }).then(function (data) {
                 console.log(data);
             });
-        }, _this.loadTasks = function (resp) {
+        }, _this.loadTasksAndMembers = function (resp) {
             var data = {};
+            var members = [];
             resp.forEach(function (i) {
                 if (typeof data[i.status] === 'undefined') {
                     data[i.status] = [];
                 }
                 data[i.status].push(i);
+
+                if (members.indexOf(i.member) === -1) {
+                    members.push(i.member);
+                }
             });
 
             _this.setState({
@@ -27779,6 +27784,7 @@ var Board = function (_React$Component) {
                 inProgress: data.inProgress,
                 inReview: data.inReview,
                 done: data.done,
+                members: members,
                 loaded: true
             });
         }, _this.onDragStart = function (ev) {
@@ -27863,6 +27869,20 @@ var Board = function (_React$Component) {
             }, function () {
                 _this.switchTask();
             });
+        }, _this.filterMembers = function (ev) {
+            console.log(ev.target);
+            console.log(ev.target.dataset.member);
+
+            var tab1 = _this.board.querySelectorAll('.task');
+            tab1.forEach(function (i) {
+                i.style.display = 'none';
+            });
+
+            var tab2 = _this.board.querySelectorAll('.task[data-name="' + ev.target.dataset.member + '"]');
+            tab2.forEach(function (i) {
+                i.style.display = 'block';
+                console.log(tab2);
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -27874,7 +27894,7 @@ var Board = function (_React$Component) {
             fetch(this.url).then(function (resp) {
                 return resp.json();
             }).then(function (resp) {
-                _this2.loadTasks(resp);
+                return _this2.loadTasksAndMembers(resp);
             }).catch(function (err) {
                 return console.log(err);
             });
@@ -27882,6 +27902,8 @@ var Board = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             var boardProps = {
                 onDragStart: this.onDragStart,
                 onDrag: this.onDrag,
@@ -27898,11 +27920,13 @@ var Board = function (_React$Component) {
 
             return _react2.default.createElement(
                 'section',
-                { className: 'board' },
+                { className: 'board', ref: function ref(rel) {
+                        _this3.board = rel;
+                    } },
                 _react2.default.createElement(
                     'div',
                     { className: 'main-width' },
-                    _react2.default.createElement(_members2.default, { title: 'Members' }),
+                    _react2.default.createElement(_members2.default, { title: 'Members', members: this.state.members, filter: this.filterMembers }),
                     _react2.default.createElement(
                         'div',
                         { className: 'subBoards-container' },
@@ -28025,6 +28049,10 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _member = __webpack_require__(256);
+
+var _member2 = _interopRequireDefault(_member);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28037,14 +28065,33 @@ var Members = function (_React$Component) {
     _inherits(Members, _React$Component);
 
     function Members() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Members);
 
-        return _possibleConstructorReturn(this, (Members.__proto__ || Object.getPrototypeOf(Members)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Members.__proto__ || Object.getPrototypeOf(Members)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function () {
+            var tab1 = document.querySelectorAll('.task');
+            tab1.forEach(function (i) {
+                i.style.display = 'block';
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Members, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
+            var members = this.props.members.map(function (item) {
+                return _react2.default.createElement(_member2.default, { name: item, key: item, filter: _this2.props.filter });
+            });
+
             return _react2.default.createElement(
                 'div',
                 { className: 'members', id: this.props.id },
@@ -28055,8 +28102,13 @@ var Members = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    null,
-                    'Tasks'
+                    { className: 'members-container' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'member', onClick: this.handleClick },
+                        'all members'
+                    ),
+                    members
                 )
             );
         }
@@ -28134,6 +28186,7 @@ var Task = function (_React$Component) {
                 { className: 'task ' + priorityLevel,
                     'data-id': this.props.id,
                     'data-status': this.props.status,
+                    'data-name': this.props.member,
                     onMouseDown: this.props.boardProps.onDragStart,
                     onMouseUp: this.props.boardProps.onDragEnd },
                 _react2.default.createElement(
@@ -28159,7 +28212,7 @@ var Task = function (_React$Component) {
                         'div',
                         { className: 'task-description' },
                         _react2.default.createElement(
-                            'span',
+                            'p',
                             null,
                             this.props.title
                         )
@@ -28471,6 +28524,61 @@ var Socials = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Socials;
+
+/***/ }),
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Member = function (_React$Component) {
+    _inherits(Member, _React$Component);
+
+    function Member() {
+        _classCallCheck(this, Member);
+
+        return _possibleConstructorReturn(this, (Member.__proto__ || Object.getPrototypeOf(Member)).apply(this, arguments));
+    }
+
+    _createClass(Member, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'member', onClick: this.props.filter },
+                _react2.default.createElement('div', { className: 'member-color' }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'member-name', 'data-member': this.props.name },
+                    this.props.name
+                )
+            );
+        }
+    }]);
+
+    return Member;
+}(_react2.default.Component);
+
+exports.default = Member;
 
 /***/ })
 /******/ ]);

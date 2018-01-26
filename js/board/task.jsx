@@ -24,6 +24,7 @@ class Task extends React.Component{
             <div className={`task ${priorityLevel}`}
                  data-id={this.props.id}
                  data-status={this.props.status}
+                 data-name={this.props.member}
                  onMouseDown={this.props.boardProps.onDragStart}
                  onMouseUp={this.props.boardProps.onDragEnd}>
                 <div className="task-title">
@@ -33,7 +34,7 @@ class Task extends React.Component{
                 <div className="task-info">
                     <div className='prior-level'/>
                     <div className="task-description">
-                        <span>{this.props.title}</span>
+                        <p>{this.props.title}</p>
                     </div>
 
                 </div>
