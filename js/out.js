@@ -13677,7 +13677,7 @@ exports = module.exports = __webpack_require__(118)(false);
 
 
 // module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid #626969; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #626969;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #2e3434;\n  color: white; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      border: 1px solid orange;\n      padding: 5px 10px; }\n\nfooter {\n  background-color: #1170a4;\n  color: #1690d2; }\n  footer .main-width {\n    height: 70px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 65px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #31a8ea; }\n\n.board-sub {\n  flex-grow: 1;\n  border-right: 1px solid #b2b2b2; }\n  .board-sub .board-sub-title {\n    background: #e5e5e5;\n    min-width: 150px;\n    height: 40px;\n    line-height: 40px;\n    text-align: center;\n    border-bottom: 1px solid #b2b2b2; }\n\n.members {\n  background-color: #e5e5e5;\n  border-right: 1px solid #b2b2b2; }\n  .members .members-title {\n    width: 120px;\n    height: 40px;\n    line-height: 40px;\n    text-align: center;\n    border-bottom: 1px solid #b2b2b2; }\n\n.task {\n  width: 140px;\n  margin: 5px;\n  padding: 0 20px;\n  border-radius: 10px; }\n  .task .task-title {\n    padding: 15px 0;\n    border-bottom: 1px solid #a5946f; }\n  .task .task-description {\n    padding: 10px 0;\n    border-bottom: 1px solid #a5946f; }\n\n.board {\n  display: flex;\n  align-items: stretch; }\n  .board .main-width {\n    display: flex;\n    flex-direction: row; }\n", ""]);
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid #acb4b4; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #2e3434;\n  color: white; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      border: 1px solid orange;\n      padding: 5px 10px; }\n\nfooter {\n  background-color: #1170a4;\n  color: #1690d2;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 70px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #31a8ea; }\n\n.members {\n  background-color: #929292;\n  border-right: 1px solid #5f5f5f; }\n  .members .members-title {\n    color: #8ecff3;\n    font-weight: bold;\n    font-size: 16px;\n    width: 120px;\n    background: #1170a4;\n    height: 40px;\n    line-height: 40px;\n    text-align: center;\n    border-bottom: 3px solid #0c5076;\n    border-right: 1px solid #0c5076; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  max-width: 320px;\n  min-width: 180px;\n  height: 90px;\n  margin: 5px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: white;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px;\n      font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  min-width: 240px;\n  z-index: 1;\n  margin: 0 10px; }\n\n.hidden {\n  max-width: 320px;\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex;\n  align-items: stretch; }\n  .board .main-width {\n    display: flex;\n    flex-direction: row; }\n    .board .main-width .subBoards-container {\n      display: flex;\n      flex-grow: 1; }\n      .board .main-width .subBoards-container .board-sub {\n        flex-grow: 1;\n        width: 150px;\n        background-color: #e2e4e6;\n        border-right: 1px solid #797979; }\n        .board .main-width .subBoards-container .board-sub .board-sub-title {\n          color: #8ecff3;\n          font-weight: bold;\n          font-size: 16px;\n          width: 100%;\n          min-width: 150px;\n          background: #1170a4;\n          height: 40px;\n          line-height: 40px;\n          text-align: center;\n          border-bottom: 3px solid #0c5076;\n          border-right: 1px solid #0c5076;\n          border-left: 1px solid #0c5076; }\n", ""]);
 
 // exports
 
@@ -27683,6 +27683,10 @@ var _members2 = _interopRequireDefault(_members);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27703,16 +27707,64 @@ var Board = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.state = {
             toDo: [],
             backlog: [],
             inProgress: [],
             inReview: [],
             done: [],
             members: [],
+            tablesCords: [],
             loaded: false,
-            activeCol: null
-        }, _this.changeLists = function (resp) {
+            activeCol: null,
+            activeTask: null
+        }, _this.switchTask = function () {
+            var _this$setState;
+
+            var activeTask = _this.state.activeTask;
+            var activeCol = _this.state.activeCol;
+            var obj = void 0;
+            var list1 = void 0;
+
+            //if no change table
+            if (activeTask.dataset.status === activeCol) {
+
+                activeTask.style.position = 'static';
+                return null;
+            }
+
+            //assign to 'obj' object from table equal with html active task
+            _this.state[activeTask.dataset.status].forEach(function (i) {
+                if (i.id === Number(activeTask.dataset.id)) {
+                    obj = Object.assign({}, i);
+                    obj.status = activeCol;
+                }
+            });
+
+            //check if table undefined and push obj to new table
+            typeof _this.state[activeCol] !== 'undefined' ? list1 = _this.state[activeCol].slice() : list1 = [];
+
+            list1.push(obj);
+
+            var list2 = _this.state[activeTask.dataset.status].filter(function (i) {
+                return i.id !== Number(activeTask.dataset.id);
+            });
+
+            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + activeTask.dataset.status, list2), _this$setState));
+        }, _this.upDateJsonServ = function (obj) {
+            fetch(_this.url + '/' + _this.state.activeTask.dataset.id, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "PUT",
+                body: JSON.stringify(obj)
+            }).then(function (resp) {
+                return resp.json();
+            }).then(function (data) {
+                console.log(data);
+            });
+        }, _this.loadTasks = function (resp) {
             var data = {};
             resp.forEach(function (i) {
                 if (typeof data[i.status] === 'undefined') {
@@ -27741,6 +27793,40 @@ var Board = function (_React$Component) {
 
             _this.grabPointY = boundingClientRect.top - ev.clientY;
             _this.grabPointX = boundingClientRect.left - ev.clientX;
+            _this.draggedEl.style.position = 'absolute';
+
+            //checking subBoards coordinates
+            var subBoards = document.querySelectorAll('.board-sub');
+            var subsCords = [].concat(_toConsumableArray(subBoards)).map(function (item) {
+                return { right: item.getBoundingClientRect().right,
+                    left: item.getBoundingClientRect().left,
+                    id: item.id };
+            });
+
+            //no colapse task box efect
+            var newBox = document.createElement('div');
+            newBox.classList.add('hidden');
+            _this.draggedEl.parentNode.insertBefore(newBox, _this.draggedEl.nextSibling);
+
+            //better drag experience
+            _this.draggedEl.classList.add('dragged');
+
+            _this.setState({
+                activeTask: _this.draggedEl,
+                tablesCords: subsCords
+            }, function () {
+                document.addEventListener('mousemove', _this.findActiveCol);
+            });
+        }, _this.findActiveCol = function (ev) {
+            var cords = _this.state.tablesCords;
+
+            cords.forEach(function (item) {
+                if (ev.clientX > item.left && ev.clientX < item.right) {
+                    if (_this.activeCol !== item.id) {
+                        _this.activeCol = item.id;
+                    }
+                }
+            });
         }, _this.onDrag = function (ev) {
             var posX = void 0,
                 posY = void 0;
@@ -27759,20 +27845,23 @@ var Board = function (_React$Component) {
                 posY = 0;
             }
 
-            _this.draggedEl.style.position = 'absolute';
             _this.draggedEl.style.left = posX + 'px';
             _this.draggedEl.style.top = posY + 'px';
         }, _this.onDragEnd = function (ev) {
-            _this.draggedEl = null;
+            if (ev.target.className.indexOf('task-title') === -1) {
+                return null;
+            }
             _this.grabPointX = null;
             _this.grabPointY = null;
+            _this.draggedEl.classList.remove('dragged');
+            _this.draggedEl = null;
+            document.removeEventListener('mousemove', _this.findActiveCol);
+            document.querySelector('.hidden').remove();
 
-            ev.target.parentNode.style.display = "none";
-        }, _this.checkActiveCol = function (ev) {
             _this.setState({
-                activeCol: ev.target.id
+                activeCol: _this.activeCol
             }, function () {
-                return console.log(_this.state.activeCol);
+                _this.switchTask();
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -27785,7 +27874,7 @@ var Board = function (_React$Component) {
             fetch(this.url).then(function (resp) {
                 return resp.json();
             }).then(function (resp) {
-                _this2.changeLists(resp);
+                _this2.loadTasks(resp);
             }).catch(function (err) {
                 return console.log(err);
             });
@@ -27793,10 +27882,7 @@ var Board = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
-
             var boardProps = {
-                checkCol: this.checkActiveCol,
                 onDragStart: this.onDragStart,
                 onDrag: this.onDrag,
                 onDragEnd: this.onDragEnd
@@ -27812,18 +27898,20 @@ var Board = function (_React$Component) {
 
             return _react2.default.createElement(
                 'section',
-                { ref: function ref(el) {
-                        return _this3.board = el;
-                    }, className: 'board' },
+                { className: 'board' },
                 _react2.default.createElement(
                     'div',
                     { className: 'main-width' },
                     _react2.default.createElement(_members2.default, { title: 'Members' }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'backLog', title: 'Backlog', table: this.state.backlog, boardProps: boardProps }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'toDo', title: 'To-Do', table: this.state.toDo, boardProps: boardProps }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'inProgress', title: 'In Progress', table: this.state.inProgress, boardProps: boardProps }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'inReview', title: 'In Review', table: this.state.inReview, boardProps: boardProps }),
-                    _react2.default.createElement(_subBoard2.default, { id: 'completed', title: 'Done', table: this.state.done, boardProps: boardProps })
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'subBoards-container' },
+                        _react2.default.createElement(_subBoard2.default, { id: 'backlog', title: 'Backlog', table: this.state.backlog, boardProps: boardProps }),
+                        _react2.default.createElement(_subBoard2.default, { id: 'toDo', title: 'To-Do', table: this.state.toDo, boardProps: boardProps }),
+                        _react2.default.createElement(_subBoard2.default, { id: 'inProgress', title: 'In Progress', table: this.state.inProgress, boardProps: boardProps }),
+                        _react2.default.createElement(_subBoard2.default, { id: 'inReview', title: 'In Review', table: this.state.inReview, boardProps: boardProps }),
+                        _react2.default.createElement(_subBoard2.default, { id: 'done', title: 'Done', table: this.state.done, boardProps: boardProps })
+                    )
                 )
             );
         }
@@ -27890,7 +27978,8 @@ var SubBoard = function (_React$Component) {
                     member: i.member,
                     priority: i.priority,
                     status: i.status,
-                    boardProps: _this.props.boardProps
+                    boardProps: _this.props.boardProps,
+                    key: i.id
                 });
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -27903,7 +27992,7 @@ var SubBoard = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'board-sub', id: this.props.id, onMouseEnter: this.props.boardProps.checkCol },
+                { className: 'board-sub', id: this.props.id },
                 _react2.default.createElement(
                     'div',
                     { className: 'board-sub-title' },
@@ -28017,14 +28106,16 @@ var Task = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Task.__proto__ || Object.getPrototypeOf(Task)).call.apply(_ref, [this].concat(args))), _this), _this.colorPicker = function (priority) {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Task.__proto__ || Object.getPrototypeOf(Task)).call.apply(_ref, [this].concat(args))), _this), _this.priorityLevel = function (priority) {
             if (priority === 'low') {
-                return '#bae19a';
+                return 'prior-low';
             } else if (priority === 'mid') {
-                return '#ffeead';
+                return 'prior-mid';
             } else if (priority === 'high') {
-                return '#ff857d';
-            } else return 'grey';
+                return 'prior-high';
+            } else {
+                return 'prior-unDef';
+            }
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -28036,40 +28127,42 @@ var Task = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var style = {
-                backgroundColor: this.colorPicker(this.props.priority)
-            };
+            var priorityLevel = this.priorityLevel(this.props.priority);
 
             return _react2.default.createElement(
                 'div',
-                { className: 'task',
-                    style: style,
+                { className: 'task ' + priorityLevel,
+                    'data-id': this.props.id,
+                    'data-status': this.props.status,
                     onMouseDown: this.props.boardProps.onDragStart,
                     onMouseUp: this.props.boardProps.onDragEnd },
                 _react2.default.createElement(
-                    'h2',
-                    { className: 'task-title' },
-                    this.props.title
-                ),
-                _react2.default.createElement(
-                    'p',
-                    { className: 'task-description' },
-                    this.props.description
-                ),
-                _react2.default.createElement(
                     'div',
-                    { className: 'task-info' },
+                    { className: 'task-title' },
                     _react2.default.createElement(
                         'span',
                         null,
-                        'ID #',
+                        '#',
                         this.props.id
                     ),
                     _react2.default.createElement(
                         'span',
                         null,
-                        'user: ',
                         this.props.member
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'task-info' },
+                    _react2.default.createElement('div', { className: 'prior-level' }),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'task-description' },
+                        _react2.default.createElement(
+                            'span',
+                            null,
+                            this.props.title
+                        )
                     )
                 )
             );

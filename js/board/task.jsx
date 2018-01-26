@@ -5,31 +5,37 @@ class Task extends React.Component{
         document.addEventListener('mousemove', this.props.boardProps.onDrag);
     }
 
-    colorPicker = (priority) => {
+    priorityLevel = (priority) => {
         if(priority === 'low'){
-            return '#bae19a'
+            return 'prior-low'
         } else if(priority === 'mid'){
-            return '#ffeead'
-        } else if(priority === 'high'){
-            return '#ff857d'
-        } else return 'grey'
+            return 'prior-mid'
+        } else if(priority === 'high') {
+            return 'prior-high'
+        }else {
+            return 'prior-unDef'
+        }
     };
 
     render(){
-        const style ={
-            backgroundColor: this.colorPicker(this.props.priority)
-        };
+        const priorityLevel = this.priorityLevel(this.props.priority);
 
         return (
-            <div className="task"
-                 style={style}
+            <div className={`task ${priorityLevel}`}
+                 data-id={this.props.id}
+                 data-status={this.props.status}
                  onMouseDown={this.props.boardProps.onDragStart}
                  onMouseUp={this.props.boardProps.onDragEnd}>
-                <h2 className="task-title" >{this.props.title}</h2>
-                <p className="task-description">{this.props.description}</p>
+                <div className="task-title">
+                    <span>#{this.props.id}</span>
+                    <span>{this.props.member}</span>
+                </div>
                 <div className="task-info">
-                    <span>ID #{this.props.id}</span>
-                    <span>user: {this.props.member}</span>
+                    <div className='prior-level'/>
+                    <div className="task-description">
+                        <span>{this.props.title}</span>
+                    </div>
+
                 </div>
             </div>
         )

@@ -18,6 +18,7 @@ class SubBoard extends React.Component{
                     priority={i.priority}
                     status={i.status}
                     boardProps={this.props.boardProps}
+                    key={i.id}
                 />
             )
         });
@@ -27,7 +28,7 @@ class SubBoard extends React.Component{
         const tasks = this.mapList(this.props.table);
 
         return (
-            <div className='board-sub' id={this.props.id} onMouseEnter={this.props.boardProps.checkCol}>
+            <div className='board-sub' id={this.props.id}>
                 <div className='board-sub-title'>{this.props.title}</div>
                 {tasks}
             </div>
