@@ -10,11 +10,13 @@ class Board extends React.Component{
     grabPointY;
 
     state = {
+        subBoards: ['toDo', 'backlog', 'inProgress', 'inReview', 'done'],
         toDo: [],
         backlog: [],
         inProgress: [],
         inReview: [],
         done: [],
+
         members: [],
         tablesCords: [],
         loaded: false,
@@ -37,7 +39,6 @@ class Board extends React.Component{
 
         //if no change table
         if(activeTask.dataset.status === activeCol){
-
             activeTask.style.position = 'static';
             return null;
         }
@@ -222,6 +223,10 @@ class Board extends React.Component{
             onDragEnd: this.onDragEnd,
         };
 
+        let subBoards = this.state.subBoards.map((item) => {
+           return <SubBoard id={item} table={this.state[item]} boardProps={boardProps} key={item}/>
+        });
+
         if(!this.state.loaded){
             return <div>Loading</div>}
 
@@ -230,11 +235,7 @@ class Board extends React.Component{
                 <div className='main-width'>
                     <Members title='Members' members={this.state.members} filter={this.filterMembers}/>
                     <div className='subBoards-container'>
-                        <SubBoard id='backlog' title='Backlog' table={this.state.backlog} boardProps={boardProps} />
-                        <SubBoard id='toDo' title='To-Do' table={this.state.toDo} boardProps={boardProps}/>
-                        <SubBoard id='inProgress' title='In Progress' table={this.state.inProgress} boardProps={boardProps}/>
-                        <SubBoard id='inReview' title='In Review' table={this.state.inReview} boardProps={boardProps}/>
-                        <SubBoard id='done' title='Done' table={this.state.done} boardProps={boardProps}/>
+                        {subBoards}
                     </div>
                 </div>
             </section>
