@@ -15,6 +15,7 @@ header {
       margin:0 25px 0 auto;
       display: flex;
       align-items: center;
+      font-size: 18px;
     }
 
     .logo{
@@ -24,9 +25,9 @@ header {
       padding: 5px 30px;
       color: white;
       background-color: $second-color;
-      -webkit-box-shadow: 0 0 20px 0 rgb(69, 69, 69);
-      -moz-box-shadow: 0 0 20px 0 rgb(69, 69, 69);
-      box-shadow: 0 0 20px 0 rgb(69, 69, 69);
+      -webkit-box-shadow: 0 0 20px 0 #292929;
+      -moz-box-shadow: 0 0 20px 0 #292929;
+      box-shadow: 0 0 20px 0 #292929;
     }
   }
 }

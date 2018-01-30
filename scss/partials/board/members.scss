@@ -2,9 +2,6 @@
   background-color: $members-color;
   width: 120px;
   .member{
-    -webkit-box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
-    -moz-box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
-    box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
     height: 40px;
     margin: 10px 10px;
     background-color: $member-color;
@@ -13,9 +10,20 @@
     line-height: 40px;
     color: white;
     cursor: pointer;
+    position: relative;
   }
   .active-member{
     background-color: $main-color;
     color: white;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 10px solid transparent;
+      border-left: 10px solid $main-color;
+      right: -20px;
+      top: 10px;
+    }
   }
 }
