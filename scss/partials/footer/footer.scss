@@ -2,13 +2,13 @@
 
 footer{
   background-color: $second-color;
-  color: lighten($second-color, 10%);
+  color: lighten($second-color, 12%);
   -webkit-box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
   -moz-box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
   box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
 
   .main-width{
-    height: 70px;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
 

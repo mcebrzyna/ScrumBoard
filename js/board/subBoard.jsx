@@ -29,7 +29,6 @@ class SubBoard extends React.Component{
 
         return (
             <div className='board-sub' id={this.props.id}>
-                <div className='board-sub-title'>{this.props.id}</div>
                 <div className='tasks-container'>
                     {tasks}
                 </div>

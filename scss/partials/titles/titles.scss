@@ -1,0 +1,31 @@
+$title-height: 40px;
+
+.titles{
+  background-color: darken($main-color, 5%);
+  z-index: 1;
+  -webkit-box-shadow: 0 0 10px 0 rgb(69, 69, 69);
+  -moz-box-shadow: 0 0 10px 0 rgb(69, 69, 69);
+  box-shadow: 0 0 10px 0 rgb(69, 69, 69);
+
+  .title-container{
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .title{
+    width: 20%;
+    height: $title-height;
+    line-height: $title-height;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+
+    &.first{
+      width: 120px;
+    }
+  }
+}
+
+
+

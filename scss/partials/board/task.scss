@@ -1,13 +1,12 @@
 $list1: low, mid, high, unDef;
 $list2: $low-color, $mid-color, $high-color, silver;
+$task-height: 90px;
 
 @for $i from 1 through length($list1){
   .task.prior-#{nth($list1, $i)}{
     font-size: 15px;
     position: relative;
-    max-width: 320px;
-    min-width: 180px;
-    height: 90px;
+    height: $task-height;
     margin: 10px 10px;
     padding: 0 10px;
     border-radius: 3px;
@@ -15,8 +14,6 @@ $list2: $low-color, $mid-color, $high-color, silver;
     -webkit-box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
     -moz-box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
     box-shadow: 1px 1px 3px 0 rgba(133,133,133,1);
-
-
     .task-title{
       border-bottom: 1px solid silver;
       height: 40%;
@@ -25,21 +22,17 @@ $list2: $low-color, $mid-color, $high-color, silver;
       justify-content: space-between;
       align-items: center;
     }
-
     .task-info{
       display: flex;
       padding: 5px 0 0 0;
-
       .prior-level{
         width: 10px;
         height: 35px;
         border-radius: 3px;
         background-color: #{nth($list2, $i)};
       }
-
       .task-description{
         padding:5px 10px;
-
         p{
           font-weight: bold;
         }
@@ -52,15 +45,13 @@ $list2: $low-color, $mid-color, $high-color, silver;
   -webkit-box-shadow: 0 0 65px 0 rgba(133,133,133,1);
   -moz-box-shadow: 0 0 65px 0 rgba(133,133,133,1);
   box-shadow: 0 0 65px 0 rgba(133,133,133,1);
-  min-width: 240px;
   z-index: 1;
   margin: 0 10px;
 }
 
 
 .hidden {
-  max-width: 320px;
-  height: 90px;
+  height: $task-height;
   margin: 5px 10px;
   border-radius: 5px;
   border: 2px dashed darken($board-color, 20%);

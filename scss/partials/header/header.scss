@@ -4,6 +4,7 @@
 header {
   background: $main-color;
   color: white;
+  z-index: 2;
 
   .main-width {
     height: 70px;
@@ -20,8 +21,12 @@ header {
       font-family: 'Patua One', sans-serif;
       font-size: 30px;
       margin: 0 0 0 20px;
-      border: 1px solid orange;
-      padding: 5px 10px;
+      padding: 5px 30px;
+      color: white;
+      background-color: $second-color;
+      -webkit-box-shadow: 0 0 20px 0 rgb(69, 69, 69);
+      -moz-box-shadow: 0 0 20px 0 rgb(69, 69, 69);
+      box-shadow: 0 0 20px 0 rgb(69, 69, 69);
     }
   }
 }

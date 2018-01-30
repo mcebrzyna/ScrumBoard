@@ -1,5 +1,4 @@
 import React from 'react';
-import Member from './member.jsx';
 
 class Members extends React.Component{
     handleClick = () =>{
@@ -11,14 +10,13 @@ class Members extends React.Component{
 
     render(){
         const members = this.props.members.map( item => {
-           return <Member name={item} key={item} filter={this.props.filter}/>
+            return <div className='member' data-member={item} onClick={this.props.filter} key={item}>{item}</div>
         });
 
         return (
             <div className='members' id={this.props.id}>
-                <div className='members-title'>{this.props.title}</div>
                 <div className='members-container'>
-                    <div className='member' onClick={this.handleClick}>all members</div>
+                    <div className='member' onClick={this.handleClick}>all</div>
                     {members}
                 </div>
             </div>

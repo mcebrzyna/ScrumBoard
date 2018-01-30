@@ -14,7 +14,7 @@
       "description": "Pójść na obiad punktualnie o 12:45",
       "member": "Mateusz",
       "priority": "mid",
-      "status": "backlog"
+      "status": "toDo"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "description": "Zorganizować colę dla pracowników",
       "member": "Michał",
       "priority": "low",
-      "status": "inProgress"
+      "status": null
     },
     {
       "id": 5,
@@ -54,7 +54,7 @@
       "description": "Zorganizować colę dla pracowników",
       "member": "Michał",
       "priority": "mid",
-      "status": "inReview"
+      "status": "inProgress"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "description": "Pójść na obiad punktualnie o 12:45",
       "member": "Mateusz",
       "priority": "mid",
-      "status": "toDo"
+      "status": "backlog"
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "description": "Skończyć projekt, żeby działał",
       "member": "Kasia",
       "priority": "high",
-      "status": "backlog"
+      "status": null
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "description": "Zorganizować colę dla pracowników",
       "member": "Ola",
       "priority": "mid",
-      "status": "inReview"
+      "status": "inProgress"
     },
     {
       "id": 13,

@@ -121,6 +121,7 @@ class Board extends React.Component{
         this.grabPointY = boundingClientRect.top - ev.clientY;
         this.grabPointX = boundingClientRect.left - ev.clientX;
         this.draggedEl.style.position = 'absolute';
+        this.draggedEl.style.width = `${boundingClientRect.width}px`;
 
         //checking subBoards coordinates
         const subBoards = document.querySelectorAll('.board-sub');
@@ -200,8 +201,7 @@ class Board extends React.Component{
     };
 
     filterMembers = (ev) => {
-        console.log(ev.target);
-        console.log(ev.target.dataset.member);
+        ev.target.classList.toggle('active-member');
 
         const tab1 = this.board.querySelectorAll(`.task`);
         tab1.forEach( i => {
@@ -211,9 +211,7 @@ class Board extends React.Component{
         const tab2 = this.board.querySelectorAll(`.task[data-name="${ev.target.dataset.member}"]`);
         tab2.forEach( i => {
             i.style.display = 'block';
-            console.log(tab2)
         });
-
     };
 
     render(){

@@ -13,6 +13,7 @@ import {
 import Board from './board/board.jsx'
 import Header from './header/header.jsx'
 import Footer from './footer/footer.jsx'
+import Titles from './titles/titles.jsx'
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return (
                 <div className='main-container'>
                     <Header />
+                    <Titles />
                     <Board />
                     <Footer />
                 </div>
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     ReactDOM.render(
-        <App />,
+        <App/>,
         document.getElementById('app')
     )
 });
