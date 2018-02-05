@@ -13592,15 +13592,15 @@ var _board = __webpack_require__(247);
 
 var _board2 = _interopRequireDefault(_board);
 
-var _header = __webpack_require__(252);
+var _header = __webpack_require__(251);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _footer = __webpack_require__(255);
+var _footer = __webpack_require__(254);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _titles = __webpack_require__(257);
+var _titles = __webpack_require__(256);
 
 var _titles2 = _interopRequireDefault(_titles);
 
@@ -27712,7 +27712,7 @@ var Board = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.tableCords = [], _this.state = {
             subBoards: ['toDo', 'backlog', 'inProgress', 'inReview', 'done'],
             toDo: [],
             backlog: [],
@@ -27721,28 +27721,25 @@ var Board = function (_React$Component) {
             done: [],
 
             members: [],
-            tablesCords: [],
-            loaded: false,
-            activeCol: null,
-            activeTask: null
+            loaded: false
         }, _this.switchTask = function () {
             var _this$setState;
 
-            var activeTask = _this.state.activeTask;
-            var activeCol = _this.state.activeCol;
+            var activeCol = _this.activeCol;
+            var draggedEl = _this.draggedEl;
             var obj = void 0;
             var list1 = void 0;
 
             //if no change table
-            if (activeTask.dataset.status === activeCol) {
-                activeTask.style.position = 'static';
+            if (draggedEl.dataset.status === activeCol || activeCol === null) {
+                draggedEl.style.position = 'static';
                 return null;
             }
 
             //assign to 'obj' object from table equal with html active task
-            _this.state[activeTask.dataset.status].forEach(function (i) {
-                if (i.id === Number(activeTask.dataset.id)) {
-                    obj = Object.assign({}, i);
+            _this.state[draggedEl.dataset.status].forEach(function (item) {
+                if (item.id === Number(draggedEl.dataset.id)) {
+                    obj = Object.assign({}, item);
                     obj.status = activeCol;
                 }
             });
@@ -27752,13 +27749,13 @@ var Board = function (_React$Component) {
 
             list1.push(obj);
 
-            var list2 = _this.state[activeTask.dataset.status].filter(function (i) {
-                return i.id !== Number(activeTask.dataset.id);
+            var list2 = _this.state[draggedEl.dataset.status].filter(function (item) {
+                return item.id !== Number(draggedEl.dataset.id);
             });
 
-            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + activeTask.dataset.status, list2), _this$setState), _this.upDateJsonServ(obj));
+            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + draggedEl.dataset.status, list2), _this$setState), _this.upDateJsonServ(obj));
         }, _this.upDateJsonServ = function (obj) {
-            fetch(_this.url + '/' + _this.state.activeTask.dataset.id, {
+            fetch(_this.url + '/' + _this.draggedEl.dataset.id, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
@@ -27795,7 +27792,9 @@ var Board = function (_React$Component) {
             });
         }, _this.onDragStart = function (ev) {
             var boundingClientRect = void 0;
+            _this.draggedEl = null;
 
+            //drag title not hole box
             if (ev.target.className.indexOf('task-title') === -1) {
                 return null;
             }
@@ -27810,7 +27809,7 @@ var Board = function (_React$Component) {
 
             //checking subBoards coordinates
             var subBoards = document.querySelectorAll('.board-sub');
-            var subsCords = [].concat(_toConsumableArray(subBoards)).map(function (item) {
+            _this.tableCords = [].concat(_toConsumableArray(subBoards)).map(function (item) {
                 return { right: item.getBoundingClientRect().right,
                     left: item.getBoundingClientRect().left,
                     id: item.id };
@@ -27824,19 +27823,13 @@ var Board = function (_React$Component) {
             //better drag experience
             _this.draggedEl.classList.add('dragged');
 
-            _this.setState({
-                activeTask: _this.draggedEl,
-                tablesCords: subsCords
-            }, function () {
-                document.addEventListener('mousemove', _this.findActiveCol);
-            });
+            document.addEventListener('mousemove', _this.findActiveCol);
         }, _this.findActiveCol = function (ev) {
-            var cords = _this.state.tablesCords;
-
-            cords.forEach(function (item) {
+            _this.tableCords.forEach(function (item) {
                 if (ev.clientX > item.left && ev.clientX < item.right) {
                     if (_this.activeCol !== item.id) {
                         _this.activeCol = item.id;
+                        console.log(_this.activeCol);
                     }
                 }
             });
@@ -27867,15 +27860,9 @@ var Board = function (_React$Component) {
             _this.grabPointX = null;
             _this.grabPointY = null;
             _this.draggedEl.classList.remove('dragged');
-            _this.draggedEl = null;
-            document.removeEventListener('mousemove', _this.findActiveCol);
             document.querySelector('.hidden').remove();
 
-            _this.setState({
-                activeCol: _this.activeCol
-            }, function () {
-                _this.switchTask();
-            });
+            _this.switchTask();
         }, _this.filterMembers = function (ev) {
             ev.target.classList.toggle('active-member');
 
@@ -27895,6 +27882,10 @@ var Board = function (_React$Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var _this2 = this;
+
+            // window.addEventListener('resize', ev => {
+            //     console.log('resize');
+            // });
 
             fetch(this.url).then(function (resp) {
                 return resp.json();
@@ -28227,8 +28218,7 @@ var Members = function (_React$Component) {
 exports.default = Members;
 
 /***/ }),
-/* 251 */,
-/* 252 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28244,11 +28234,11 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _userBtn = __webpack_require__(253);
+var _userBtn = __webpack_require__(252);
 
 var _userBtn2 = _interopRequireDefault(_userBtn);
 
-var _menuBtn = __webpack_require__(254);
+var _menuBtn = __webpack_require__(253);
 
 var _menuBtn2 = _interopRequireDefault(_menuBtn);
 
@@ -28300,7 +28290,7 @@ var Header = function (_React$Component) {
 exports.default = Header;
 
 /***/ }),
-/* 253 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28355,7 +28345,7 @@ var UserBtn = function (_React$Component) {
 exports.default = UserBtn;
 
 /***/ }),
-/* 254 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28407,7 +28397,7 @@ var MenuBtn = function (_React$Component) {
 exports.default = MenuBtn;
 
 /***/ }),
-/* 255 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28423,7 +28413,7 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _socials = __webpack_require__(256);
+var _socials = __webpack_require__(255);
 
 var _socials2 = _interopRequireDefault(_socials);
 
@@ -28475,7 +28465,7 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 256 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28526,7 +28516,7 @@ var Socials = function (_React$Component) {
 exports.default = Socials;
 
 /***/ }),
-/* 257 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

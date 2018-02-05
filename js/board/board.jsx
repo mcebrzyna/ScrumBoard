@@ -6,6 +6,7 @@ class Board extends React.Component{
     url = 'http://localhost:3000/tasks';
     draggedEl = null;
     activeCol = null;
+    tableCords = [];
     grabPointX;
     grabPointY;
 
@@ -18,35 +19,37 @@ class Board extends React.Component{
         done: [],
 
         members: [],
-        tablesCords: [],
         loaded: false,
-        activeCol: null,
-        activeTask: null,
     };
 
     componentDidMount(){
+
+        // window.addEventListener('resize', ev => {
+        //     console.log('resize');
+        // });
+
         fetch(this.url)
             .then(resp => resp.json())
             .then(resp => this.loadTasksAndMembers(resp))
-            .catch(err => (console.log(err)))
+            .catch(err => (console.log(err)));
     }
 
     switchTask = () => {
-        let activeTask = this.state.activeTask;
-        let activeCol = this.state.activeCol;
+        let activeCol = this.activeCol;
+        let draggedEl = this.draggedEl;
         let obj;
         let list1;
 
         //if no change table
-        if(activeTask.dataset.status === activeCol){
-            activeTask.style.position = 'static';
+        if(draggedEl.dataset.status === activeCol || activeCol === null){
+            draggedEl.style.position = 'static';
             return null;
         }
 
         //assign to 'obj' object from table equal with html active task
-        this.state[activeTask.dataset.status].forEach( i => {
-          if(i.id === Number(activeTask.dataset.id)){
-              obj = Object.assign({}, i);
+        this.state[draggedEl.dataset.status].forEach( item => {
+          if(item.id === Number(draggedEl.dataset.id)){
+              obj = Object.assign({}, item);
               obj.status = activeCol;
           }
         });
@@ -58,18 +61,18 @@ class Board extends React.Component{
 
         list1.push(obj);
 
-        const list2 = this.state[activeTask.dataset.status].filter( i => {
-            return i.id !== Number(activeTask.dataset.id)
+        const list2 = this.state[draggedEl.dataset.status].filter( item => {
+            return item.id !== Number(draggedEl.dataset.id)
         });
 
         this.setState({
             [`${activeCol}`]: list1,
-            [`${activeTask.dataset.status}`]: list2,
+            [`${draggedEl.dataset.status}`]: list2,
         }, this.upDateJsonServ(obj));
     };
 
     upDateJsonServ = (obj) => {
-        fetch(`${this.url}/${this.state.activeTask.dataset.id}`,
+        fetch(`${this.url}/${this.draggedEl.dataset.id}`,
             {
                 headers: {
                     'Accept': 'application/json',
@@ -110,7 +113,9 @@ class Board extends React.Component{
 
     onDragStart = (ev) => {
         let boundingClientRect;
+        this.draggedEl = null;
 
+        //drag title not hole box
         if (ev.target.className.indexOf('task-title') === -1){
             return null;
         }
@@ -125,7 +130,7 @@ class Board extends React.Component{
 
         //checking subBoards coordinates
         const subBoards = document.querySelectorAll('.board-sub');
-        const subsCords = [...subBoards].map( item => {
+        this.tableCords = [...subBoards].map( item => {
             return {right: item.getBoundingClientRect().right,
                 left: item.getBoundingClientRect().left,
                 id: item.id,}
@@ -139,22 +144,15 @@ class Board extends React.Component{
         //better drag experience
         this.draggedEl.classList.add('dragged');
 
-        this.setState({
-            activeTask: this.draggedEl,
-            tablesCords: subsCords,
-        }, () => {
-            document.addEventListener('mousemove', this.findActiveCol);
-        });
-
+        document.addEventListener('mousemove', this.findActiveCol);
     };
 
     findActiveCol = (ev) => {
-        let cords = this.state.tablesCords;
-
-        cords.forEach( item => {
+        this.tableCords.forEach( item => {
             if(ev.clientX > item.left && ev.clientX < item.right){
                 if(this.activeCol !== item.id){
                     this.activeCol = item.id;
+                    console.log(this.activeCol)
                 }
             }
         });
@@ -188,16 +186,9 @@ class Board extends React.Component{
         this.grabPointX = null;
         this.grabPointY = null;
         this.draggedEl.classList.remove('dragged');
-        this.draggedEl = null;
-        document.removeEventListener('mousemove', this.findActiveCol);
         document.querySelector('.hidden').remove();
 
-
-        this.setState({
-            activeCol: this.activeCol
-        },() => {
-            this.switchTask();
-        })
+        this.switchTask();
     };
 
     filterMembers = (ev) => {
