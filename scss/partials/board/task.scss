@@ -21,6 +21,12 @@ $task-height: 90px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 1;
+      span{
+        user-select: none;
+        z-index: 0;
+
+      }
     }
     .task-info{
       display: flex;
@@ -45,7 +51,7 @@ $task-height: 90px;
   -webkit-box-shadow: 0 0 65px 0 rgba(133,133,133,1);
   -moz-box-shadow: 0 0 65px 0 rgba(133,133,133,1);
   box-shadow: 0 0 65px 0 rgba(133,133,133,1);
-  z-index: 1;
+  z-index: 3;
   margin: 0 10px;
 }
 

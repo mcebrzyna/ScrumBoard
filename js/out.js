@@ -13682,7 +13682,7 @@ exports = module.exports = __webpack_require__(118)(false);
 
 
 // module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid white; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #5F4B8B;\n  color: white;\n  z-index: 2; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center;\n      font-size: 18px; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      padding: 5px 30px;\n      color: white;\n      background-color: #353639;\n      -webkit-box-shadow: 0 0 20px 0 #292929;\n      -moz-box-shadow: 0 0 20px 0 #292929;\n      box-shadow: 0 0 20px 0 #292929; }\n\nfooter {\n  background-color: #353639;\n  color: #525459;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 50px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #66686e; }\n\n.members {\n  background-color: #F2F2F2;\n  width: 120px; }\n  .members .member {\n    height: 40px;\n    margin: 10px 10px;\n    background-color: #A9A9A9;\n    display: flex;\n    justify-content: center;\n    line-height: 40px;\n    color: white;\n    cursor: pointer;\n    position: relative; }\n  .members .active-member {\n    background-color: #5F4B8B;\n    color: white; }\n    .members .active-member::before {\n      content: '';\n      display: block;\n      position: absolute;\n      border: 10px solid transparent;\n      border-left: 10px solid #5F4B8B;\n      right: -20px;\n      top: 10px; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-low .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-mid .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-high .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-unDef .task-info .task-description p {\n        font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 65px 0 #858585;\n  -moz-box-shadow: 0 0 65px 0 #858585;\n  box-shadow: 0 0 65px 0 #858585;\n  z-index: 1;\n  margin: 0 10px; }\n\n.hidden {\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex; }\n  .board .subBoards-container {\n    display: flex;\n    flex-grow: 1; }\n    .board .subBoards-container .board-sub {\n      width: 20%;\n      background-color: #ffffff;\n      border-right: 2px solid #e1e1e1; }\n\n.titles {\n  background-color: #54427a;\n  z-index: 1;\n  -webkit-box-shadow: 0 0 10px 0 #454545;\n  -moz-box-shadow: 0 0 10px 0 #454545;\n  box-shadow: 0 0 10px 0 #454545; }\n  .titles .title-container {\n    flex-grow: 1;\n    display: flex; }\n  .titles .title {\n    width: 20%;\n    height: 40px;\n    line-height: 40px;\n    color: white;\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center; }\n    .titles .title.first {\n      width: 120px; }\n", ""]);
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid white; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #5F4B8B;\n  color: white;\n  z-index: 2; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center;\n      font-size: 18px; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      padding: 5px 30px;\n      color: white;\n      background-color: #353639;\n      -webkit-box-shadow: 0 0 20px 0 #292929;\n      -moz-box-shadow: 0 0 20px 0 #292929;\n      box-shadow: 0 0 20px 0 #292929; }\n\nfooter {\n  background-color: #353639;\n  color: #525459;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 50px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #66686e; }\n\n.members {\n  background-color: #F2F2F2;\n  width: 120px; }\n  .members .member {\n    height: 40px;\n    margin: 10px 10px;\n    background-color: #A9A9A9;\n    display: flex;\n    justify-content: center;\n    line-height: 40px;\n    color: white;\n    cursor: pointer;\n    position: relative; }\n  .members .active-member {\n    background-color: #5F4B8B;\n    color: white; }\n    .members .active-member::before {\n      content: '';\n      display: block;\n      position: absolute;\n      border: 10px solid transparent;\n      border-left: 10px solid #5F4B8B;\n      right: -20px;\n      top: 10px; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-low .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-low .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-mid .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-mid .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-high .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-high .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-unDef .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-unDef .task-info .task-description p {\n        font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 65px 0 #858585;\n  -moz-box-shadow: 0 0 65px 0 #858585;\n  box-shadow: 0 0 65px 0 #858585;\n  z-index: 3;\n  margin: 0 10px; }\n\n.hidden {\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex; }\n  .board .subBoards-container {\n    display: flex;\n    flex-grow: 1;\n    overflow: auto; }\n    .board .subBoards-container .board-sub {\n      width: 20%;\n      background-color: #ffffff;\n      border-right: 2px solid #e1e1e1; }\n\n.titles {\n  background-color: #54427a;\n  z-index: 1;\n  -webkit-box-shadow: 0 0 10px 0 #454545;\n  -moz-box-shadow: 0 0 10px 0 #454545;\n  box-shadow: 0 0 10px 0 #454545; }\n  .titles .title-container {\n    flex-grow: 1;\n    display: flex; }\n  .titles .title {\n    width: 20%;\n    height: 40px;\n    line-height: 40px;\n    color: white;\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center; }\n    .titles .title.first {\n      width: 120px; }\n", ""]);
 
 // exports
 
@@ -27688,9 +27688,9 @@ var _members2 = _interopRequireDefault(_members);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -27712,49 +27712,25 @@ var Board = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.tableCords = [], _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.tableCords = [], _this.membersBtnOn = [], _this.state = {
             subBoards: ['toDo', 'backlog', 'inProgress', 'inReview', 'done'],
             toDo: [],
             backlog: [],
             inProgress: [],
             inReview: [],
             done: [],
-
             members: [],
+            filteredMembers: [],
             loaded: false
-        }, _this.switchTask = function () {
-            var _this$setState;
+        }, _this.checkCoordinates = function () {
+            var subBoards = document.querySelectorAll('.board-sub');
+            _this.tableCords = [].concat(_toConsumableArray(subBoards)).map(function (item) {
 
-            var activeCol = _this.activeCol;
-            var draggedEl = _this.draggedEl;
-            var obj = void 0;
-            var list1 = void 0;
-
-            //if no change table
-            if (draggedEl.dataset.status === activeCol || activeCol === null) {
-                draggedEl.style.position = 'static';
-                return null;
-            }
-
-            //assign to 'obj' object from table equal with html active task
-            _this.state[draggedEl.dataset.status].forEach(function (item) {
-                if (item.id === Number(draggedEl.dataset.id)) {
-                    obj = Object.assign({}, item);
-                    obj.status = activeCol;
-                }
+                return { right: item.getBoundingClientRect().right,
+                    left: item.getBoundingClientRect().left,
+                    id: item.id };
             });
-
-            //check if table undefined and push obj to new table
-            typeof _this.state[activeCol] !== 'undefined' ? list1 = _this.state[activeCol].slice() : list1 = [];
-
-            list1.push(obj);
-
-            var list2 = _this.state[draggedEl.dataset.status].filter(function (item) {
-                return item.id !== Number(draggedEl.dataset.id);
-            });
-
-            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + activeCol, list1), _defineProperty(_this$setState, '' + draggedEl.dataset.status, list2), _this$setState), _this.upDateJsonServ(obj));
-        }, _this.upDateJsonServ = function (obj) {
+        }, _this.updateJsonServ = function (obj) {
             fetch(_this.url + '/' + _this.draggedEl.dataset.id, {
                 headers: {
                     'Accept': 'application/json',
@@ -27788,13 +27764,16 @@ var Board = function (_React$Component) {
                 inReview: data.inReview,
                 done: data.done,
                 members: members,
+                filteredMembers: members,
                 loaded: true
+            }, function () {
+                return _this.checkCoordinates();
             });
         }, _this.onDragStart = function (ev) {
-            var boundingClientRect = void 0;
             _this.draggedEl = null;
+            var boundingClientRect = void 0;
 
-            //drag title not hole box
+            // drag title not hole box
             if (ev.target.className.indexOf('task-title') === -1) {
                 return null;
             }
@@ -27804,16 +27783,9 @@ var Board = function (_React$Component) {
 
             _this.grabPointY = boundingClientRect.top - ev.clientY;
             _this.grabPointX = boundingClientRect.left - ev.clientX;
+
             _this.draggedEl.style.position = 'absolute';
             _this.draggedEl.style.width = boundingClientRect.width + 'px';
-
-            //checking subBoards coordinates
-            var subBoards = document.querySelectorAll('.board-sub');
-            _this.tableCords = [].concat(_toConsumableArray(subBoards)).map(function (item) {
-                return { right: item.getBoundingClientRect().right,
-                    left: item.getBoundingClientRect().left,
-                    id: item.id };
-            });
 
             //no colapse task box efect
             var newBox = document.createElement('div');
@@ -27822,14 +27794,12 @@ var Board = function (_React$Component) {
 
             //better drag experience
             _this.draggedEl.classList.add('dragged');
-
-            document.addEventListener('mousemove', _this.findActiveCol);
+            document.addEventListener('mousemove', _this.onDrag);
         }, _this.findActiveCol = function (ev) {
             _this.tableCords.forEach(function (item) {
                 if (ev.clientX > item.left && ev.clientX < item.right) {
                     if (_this.activeCol !== item.id) {
                         _this.activeCol = item.id;
-                        console.log(_this.activeCol);
                     }
                 }
             });
@@ -27862,19 +27832,77 @@ var Board = function (_React$Component) {
             _this.draggedEl.classList.remove('dragged');
             document.querySelector('.hidden').remove();
 
+            document.removeEventListener('mousemove', _this.onDrag);
+
             _this.switchTask();
+        }, _this.switchTask = function () {
+            var _this$setState;
+
+            var activeCol = _this.activeCol;
+            var draggedEl = _this.draggedEl;
+            var obj = void 0;
+            var list1 = void 0,
+                list2 = void 0;
+
+            //if table is not changed
+            if (draggedEl.dataset.status === activeCol || activeCol === null) {
+                draggedEl.style.position = 'static';
+                _this.draggedEl.style.left = 'auto';
+                _this.draggedEl.style.top = 'auto';
+                _this.draggedEl.style.width = 'auto';
+                return null;
+            }
+
+            //assign to 'obj' object from table equal with html active task
+            _this.state[draggedEl.dataset.status].forEach(function (item) {
+                if (item.id === Number(draggedEl.dataset.id)) {
+                    obj = Object.assign({}, item);
+                    obj.status = activeCol;
+                }
+            });
+
+            list1 = _this.state[draggedEl.dataset.status].filter(function (item) {
+                return item.id !== Number(draggedEl.dataset.id);
+            });
+
+            //check if table undefined and push obj to new table
+            typeof _this.state[activeCol] !== 'undefined' ? list2 = _this.state[activeCol].slice() : list2 = [];
+
+            list2.push(obj);
+
+            _this.setState((_this$setState = {}, _defineProperty(_this$setState, '' + draggedEl.dataset.status, list1), _defineProperty(_this$setState, '' + activeCol, list2), _this$setState), _this.updateJsonServ(obj));
         }, _this.filterMembers = function (ev) {
+
+            //all button
+            if (ev.target.className.indexOf('all') !== -1) {
+                _this.boards.querySelectorAll('.active-member').forEach(function (item) {
+                    item.classList.remove('active-member');
+                });
+
+                _this.membersBtnOn = [];
+                _this.setState({ filteredMembers: _this.state.members });
+                return null;
+            }
+
+            //member button
             ev.target.classList.toggle('active-member');
 
-            var tab1 = _this.board.querySelectorAll('.task');
-            tab1.forEach(function (i) {
-                i.style.display = 'none';
-            });
+            if (ev.target.className.indexOf('active-member') !== -1) {
+                _this.membersBtnOn.push(ev.target.dataset.member);
 
-            var tab2 = _this.board.querySelectorAll('.task[data-name="' + ev.target.dataset.member + '"]');
-            tab2.forEach(function (i) {
-                i.style.display = 'block';
-            });
+                _this.setState({ filteredMembers: _this.membersBtnOn });
+            } else {
+
+                _this.membersBtnOn = [].concat(_toConsumableArray(_this.membersBtnOn)).filter(function (item) {
+                    return item !== ev.target.dataset.member;
+                });
+
+                if (_this.membersBtnOn.length === 0) {
+                    _this.setState({ filteredMembers: _this.state.members });
+                } else {
+                    _this.setState({ filteredMembers: _this.membersBtnOn });
+                }
+            }
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -27883,10 +27911,6 @@ var Board = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            // window.addEventListener('resize', ev => {
-            //     console.log('resize');
-            // });
-
             fetch(this.url).then(function (resp) {
                 return resp.json();
             }).then(function (resp) {
@@ -27894,6 +27918,9 @@ var Board = function (_React$Component) {
             }).catch(function (err) {
                 return console.log(err);
             });
+
+            window.addEventListener('resize', this.checkCoordinates);
+            document.addEventListener('mousemove', this.findActiveCol);
         }
     }, {
         key: 'render',
@@ -27907,7 +27934,11 @@ var Board = function (_React$Component) {
             };
 
             var subBoards = this.state.subBoards.map(function (item) {
-                return _react2.default.createElement(_subBoard2.default, { id: item, table: _this3.state[item], boardProps: boardProps, key: item });
+                return _react2.default.createElement(_subBoard2.default, { id: item,
+                    table: _this3.state[item],
+                    boardProps: boardProps,
+                    key: item,
+                    filteredMembers: _this3.state.filteredMembers });
             });
 
             if (!this.state.loaded) {
@@ -27921,7 +27952,7 @@ var Board = function (_React$Component) {
             return _react2.default.createElement(
                 'section',
                 { className: 'board', ref: function ref(rel) {
-                        _this3.board = rel;
+                        _this3.boards = rel;
                     } },
                 _react2.default.createElement(
                     'div',
@@ -27985,12 +28016,16 @@ var SubBoard = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SubBoard.__proto__ || Object.getPrototypeOf(SubBoard)).call.apply(_ref, [this].concat(args))), _this), _this.mapList = function (list) {
-            if (typeof list === 'undefined') {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SubBoard.__proto__ || Object.getPrototypeOf(SubBoard)).call.apply(_ref, [this].concat(args))), _this), _this.generateTasks = function (table) {
+            if (typeof table === 'undefined') {
                 return null;
             }
 
-            return list.map(function (i) {
+            table = table.filter(function (item) {
+                return _this.props.filteredMembers.indexOf(item.member) !== -1;
+            });
+
+            return table.map(function (i) {
                 return _react2.default.createElement(_task2.default, {
                     id: i.id,
                     title: i.title,
@@ -28008,7 +28043,7 @@ var SubBoard = function (_React$Component) {
     _createClass(SubBoard, [{
         key: 'render',
         value: function render() {
-            var tasks = this.mapList(this.props.table);
+            var tasks = this.generateTasks(this.props.table);
 
             return _react2.default.createElement(
                 'div',
@@ -28080,11 +28115,6 @@ var Task = function (_React$Component) {
     }
 
     _createClass(Task, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.addEventListener('mousemove', this.props.boardProps.onDrag);
-        }
-    }, {
         key: 'render',
         value: function render() {
             var priorityLevel = this.priorityLevel(this.props.priority);
@@ -28094,7 +28124,7 @@ var Task = function (_React$Component) {
                 { className: 'task ' + priorityLevel,
                     'data-id': this.props.id,
                     'data-status': this.props.status,
-                    'data-name': this.props.member,
+                    'data-member': this.props.member,
                     onMouseDown: this.props.boardProps.onDragStart,
                     onMouseUp: this.props.boardProps.onDragEnd },
                 _react2.default.createElement(
@@ -28203,7 +28233,7 @@ var Members = function (_React$Component) {
                     { className: 'members-container' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'member', onClick: this.handleClick },
+                        { className: 'member all', onClick: this.props.filter },
                         'all'
                     ),
                     members

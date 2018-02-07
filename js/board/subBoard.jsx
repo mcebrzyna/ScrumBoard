@@ -3,12 +3,16 @@ import Task from "./task.jsx";
 
 class SubBoard extends React.Component{
 
-    mapList = list => {
-        if(typeof list === 'undefined'){
+    generateTasks = (table) => {
+        if(typeof table === 'undefined'){
             return null;
         }
 
-        return list.map(i => {
+        table = table.filter(item => {
+            return (this.props.filteredMembers.indexOf(item.member) !== -1)
+        });
+
+        return table.map(i => {
             return(
                 <Task
                     id={i.id}
@@ -25,7 +29,7 @@ class SubBoard extends React.Component{
     };
 
     render(){
-        const tasks = this.mapList(this.props.table);
+        const tasks = this.generateTasks(this.props.table);
 
         return (
             <div className='board-sub' id={this.props.id}>

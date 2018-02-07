@@ -1,9 +1,6 @@
 import React from 'react';
 
 class Task extends React.Component{
-    componentDidMount(){
-        document.addEventListener('mousemove', this.props.boardProps.onDrag);
-    }
 
     priorityLevel = (priority) => {
         if(priority === 'low'){
@@ -24,7 +21,7 @@ class Task extends React.Component{
             <div className={`task ${priorityLevel}`}
                  data-id={this.props.id}
                  data-status={this.props.status}
-                 data-name={this.props.member}
+                 data-member={this.props.member}
                  onMouseDown={this.props.boardProps.onDragStart}
                  onMouseUp={this.props.boardProps.onDragEnd}>
                 <div className="task-title">

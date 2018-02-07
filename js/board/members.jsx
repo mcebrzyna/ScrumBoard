@@ -16,7 +16,7 @@ class Members extends React.Component{
         return (
             <div className='members' id={this.props.id}>
                 <div className='members-container'>
-                    <div className='member' onClick={this.handleClick}>all</div>
+                    <div className='member all' onClick={this.props.filter}>all</div>
                     {members}
                 </div>
             </div>
