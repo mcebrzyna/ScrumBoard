@@ -27712,7 +27712,7 @@ var Board = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://localhost:3000/tasks', _this.draggedEl = null, _this.activeCol = null, _this.tableCords = [], _this.membersBtnOn = [], _this.state = {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Board.__proto__ || Object.getPrototypeOf(Board)).call.apply(_ref, [this].concat(args))), _this), _this.url = 'http://cebrzyna.ayz.pl/db.json', _this.draggedEl = null, _this.activeCol = null, _this.tableCords = [], _this.membersBtnOn = [], _this.state = {
             subBoards: ['toDo', 'backlog', 'inProgress', 'inReview', 'done'],
             toDo: [],
             backlog: [],
@@ -27732,10 +27732,10 @@ var Board = function (_React$Component) {
             });
         }, _this.updateJsonServ = function (obj) {
             fetch(_this.url + '/' + _this.draggedEl.dataset.id, {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
+                // headers: {
+                //     'Accept': 'application/json',
+                //     'Content-Type': 'application/json'
+                // },
                 method: "PUT",
                 body: JSON.stringify(obj)
             }).then(function (resp) {

@@ -4,7 +4,7 @@ import Members from './members.jsx'
 
 
 class Board extends React.Component{
-    url = 'http://localhost:3000/tasks';
+    url = 'http://cebrzyna.ayz.pl/db.json';
     draggedEl = null;
     activeCol = null;
     tableCords = [];
@@ -47,10 +47,10 @@ class Board extends React.Component{
     updateJsonServ = (obj) => {
         fetch(`${this.url}/${this.draggedEl.dataset.id}`,
             {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
+                // headers: {
+                //     'Accept': 'application/json',
+                //     'Content-Type': 'application/json'
+                // },
                 method: "PUT",
                 body: JSON.stringify(obj)
             }).then( resp => resp.json())
