@@ -1,23 +1,13 @@
-@import "menuBtn";
-@import "userBtn";
+@import "menu";
 
 header {
   background: $main-color;
   color: white;
   z-index: 2;
-
   .main-width {
     height: 70px;
     align-items: center;
     justify-content: flex-start;
-
-    .nav-box{
-      margin:0 25px 0 auto;
-      display: flex;
-      align-items: center;
-      font-size: 18px;
-    }
-
     .logo{
       font-family: 'Patua One', sans-serif;
       font-size: 30px;
@@ -28,6 +18,12 @@ header {
       -webkit-box-shadow: 0 0 20px 0 #292929;
       -moz-box-shadow: 0 0 20px 0 #292929;
       box-shadow: 0 0 20px 0 #292929;
+    }
+    .nav-box{
+      margin:0 25px 0 auto;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
     }
   }
 }

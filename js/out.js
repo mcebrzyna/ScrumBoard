@@ -13596,11 +13596,11 @@ var _header = __webpack_require__(251);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _footer = __webpack_require__(254);
+var _footer = __webpack_require__(253);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _titles = __webpack_require__(256);
+var _titles = __webpack_require__(255);
 
 var _titles2 = _interopRequireDefault(_titles);
 
@@ -13682,7 +13682,7 @@ exports = module.exports = __webpack_require__(118)(false);
 
 
 // module
-exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 15px 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid white; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n\n.user-btn {\n  border-right: 1px solid #acb4b4;\n  padding: 0 25px 0 0;\n  cursor: pointer; }\n  .user-btn .user-logo {\n    margin: 0 0 0 10px; }\n  .user-btn:hover {\n    color: #46ecce; }\n\nheader {\n  background: #5F4B8B;\n  color: white;\n  z-index: 2; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center;\n      font-size: 18px; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      padding: 5px 30px;\n      color: white;\n      background-color: #353639;\n      -webkit-box-shadow: 0 0 20px 0 #292929;\n      -moz-box-shadow: 0 0 20px 0 #292929;\n      box-shadow: 0 0 20px 0 #292929; }\n\nfooter {\n  background-color: #353639;\n  color: #525459;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 50px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #66686e; }\n\n.members {\n  background-color: #F2F2F2;\n  width: 120px; }\n  .members .member {\n    height: 40px;\n    margin: 10px 10px;\n    background-color: #A9A9A9;\n    display: flex;\n    justify-content: center;\n    line-height: 40px;\n    color: white;\n    cursor: pointer;\n    position: relative; }\n  .members .active-member {\n    background-color: #5F4B8B;\n    color: white; }\n    .members .active-member::before {\n      content: '';\n      display: block;\n      position: absolute;\n      border: 10px solid transparent;\n      border-left: 10px solid #5F4B8B;\n      right: -20px;\n      top: 10px; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-low .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-low .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-mid .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-mid .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-high .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-high .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-unDef .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-unDef .task-info .task-description p {\n        font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 65px 0 #858585;\n  -moz-box-shadow: 0 0 65px 0 #858585;\n  box-shadow: 0 0 65px 0 #858585;\n  z-index: 3;\n  margin: 0 10px; }\n\n.hidden {\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex; }\n  .board .subBoards-container {\n    display: flex;\n    flex-grow: 1;\n    overflow: auto; }\n    .board .subBoards-container .board-sub {\n      width: 20%;\n      background-color: #ffffff;\n      border-right: 2px solid #e1e1e1; }\n\n.titles {\n  background-color: #54427a;\n  z-index: 1;\n  -webkit-box-shadow: 0 0 10px 0 #454545;\n  -moz-box-shadow: 0 0 10px 0 #454545;\n  box-shadow: 0 0 10px 0 #454545; }\n  .titles .title-container {\n    flex-grow: 1;\n    display: flex; }\n  .titles .title {\n    width: 20%;\n    height: 40px;\n    line-height: 40px;\n    color: white;\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center; }\n    .titles .title.first {\n      width: 120px; }\n", ""]);
+exports.push([module.i, "/*\n\tHTML5 Reset :: style.css\n\t----------------------------------------------------------\n\tWe have learned much from/been inspired by/taken code where offered from:\n\tEric Meyer\t\t\t\t\t:: http://meyerweb.com\n\tHTML5 Doctor\t\t\t\t:: http://html5doctor.com\n\tand the HTML5 Boilerplate\t:: http://html5boilerplate.com\n-------------------------------------------------------------------------------*/\n/* Let's default this puppy out\n-------------------------------------------------------------------------------*/\nhtml, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font-weight: normal;\n  vertical-align: baseline;\n  background: transparent; }\n\nmain, article, aside, figure, footer, header, nav, section, details, summary {\n  display: block; }\n\n/* Handle box-sizing while better addressing child elements:\n   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */\nhtml {\n  box-sizing: border-box; }\n\n*,\n*:before,\n*:after {\n  box-sizing: inherit; }\n\n/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */\n/* Responsive images and other embedded objects */\n/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */\nimg,\nobject,\nembed {\n  max-width: 100%; }\n\n/*\n   Note: keeping IMG here will cause problems if you're using foreground images as sprites.\n\tIn fact, it *will* cause problems with Google Maps' controls at small size.\n\tIf this is the case for you, try uncommenting the following:\n#map img {\n\t\tmax-width: none;\n}\n*/\n/* force a vertical scrollbar to prevent a jumpy page */\nhtml {\n  overflow-y: scroll; }\n\n/* we use a lot of ULs that aren't bulleted.\n\tyou'll have to restore the bullets within content,\n\twhich is fine because they're probably customized anyway */\nul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none; }\n\na {\n  margin: 0;\n  padding: 0;\n  font-size: 100%;\n  vertical-align: baseline;\n  background: transparent; }\n\ndel {\n  text-decoration: line-through; }\n\nabbr[title], dfn[title] {\n  border-bottom: 1px dotted #000;\n  cursor: help; }\n\n/* tables still need cellspacing=\"0\" in the markup */\ntable {\n  border-collapse: separate;\n  border-spacing: 0; }\n\nth {\n  font-weight: bold;\n  vertical-align: bottom; }\n\ntd {\n  font-weight: normal;\n  vertical-align: top; }\n\nhr {\n  display: block;\n  height: 1px;\n  border: 0;\n  border-top: 1px solid #ccc;\n  margin: 1em 0;\n  padding: 0; }\n\ninput, select {\n  vertical-align: middle; }\n\npre {\n  white-space: pre;\n  /* CSS2 */\n  white-space: pre-wrap;\n  /* CSS 2.1 */\n  white-space: pre-line;\n  /* CSS 3 (and 2.1 as well, actually) */\n  word-wrap: break-word;\n  /* IE */ }\n\ninput[type=\"radio\"] {\n  vertical-align: text-bottom; }\n\ninput[type=\"checkbox\"] {\n  vertical-align: bottom; }\n\n.ie7 input[type=\"checkbox\"] {\n  vertical-align: baseline; }\n\n.ie6 input {\n  vertical-align: text-bottom; }\n\nselect, input, textarea {\n  font: 99% sans-serif; }\n\ntable {\n  font-size: inherit;\n  font: 100%; }\n\nsmall {\n  font-size: 85%; }\n\nstrong {\n  font-weight: bold; }\n\ntd, td img {\n  vertical-align: top; }\n\n/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */\nsub, sup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative; }\n\nsup {\n  top: -0.5em; }\n\nsub {\n  bottom: -0.25em; }\n\n/* standardize any monospaced elements */\npre, code, kbd, samp {\n  font-family: monospace, sans-serif; }\n\n/* hand cursor on clickable elements */\n.clickable,\nlabel,\ninput[type=button],\ninput[type=submit],\ninput[type=file],\nbutton {\n  cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea {\n  margin: 0; }\n\n/* make buttons play nice in IE */\nbutton,\ninput[type=button] {\n  width: auto;\n  overflow: visible; }\n\n/* scale images in IE7 more attractively */\n.ie7 img {\n  -ms-interpolation-mode: bicubic; }\n\n/* prevent BG image flicker upon hover\n   (commented out as usage is rare, and the filter syntax messes with some pre-processors)\n.ie6 html {filter: expression(document.execCommand(\"BackgroundImageCache\", false, true));}\n*/\n/* let's clear some floats */\n.clearfix:after {\n  content: \" \";\n  display: block;\n  clear: both; }\n\n* {\n  font-size: 18px;\n  font-family: 'Open Sans', sans-serif;\n  overflow: hidden; }\n\n#app .main-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column; }\n  #app .main-container .board {\n    flex-grow: 1; }\n  #app .main-container .main-width {\n    width: 100%;\n    min-width: 700px;\n    margin: 0 auto;\n    display: flex;\n    flex-direction: row; }\n\n.menu-btn {\n  margin: 0 0 0 25px;\n  cursor: pointer;\n  padding: 6px 10px;\n  border: 1px solid white; }\n  .menu-btn .icon-bar {\n    display: block;\n    width: 18px;\n    border-bottom: 2px solid white;\n    border-radius: 1px;\n    margin: 3px 0 0 0; }\n  .menu-btn .icon-bar:first-child {\n    margin: 0; }\n  .menu-btn:hover {\n    border-color: #46ecce; }\n    .menu-btn:hover > .icon-bar {\n      border-color: #46ecce; }\n\n.menu-box {\n  height: 400px;\n  width: 400px;\n  background: #353639;\n  position: absolute;\n  top: 70px;\n  left: 100%; }\n\nheader {\n  background: #5F4B8B;\n  color: white;\n  z-index: 2; }\n  header .main-width {\n    height: 70px;\n    align-items: center;\n    justify-content: flex-start; }\n    header .main-width .logo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 30px;\n      margin: 0 0 0 20px;\n      padding: 5px 30px;\n      color: white;\n      background-color: #353639;\n      -webkit-box-shadow: 0 0 20px 0 #292929;\n      -moz-box-shadow: 0 0 20px 0 #292929;\n      box-shadow: 0 0 20px 0 #292929; }\n    header .main-width .nav-box {\n      margin: 0 25px 0 auto;\n      display: flex;\n      align-items: center;\n      font-size: 18px; }\n\nfooter {\n  background-color: #353639;\n  color: #525459;\n  -webkit-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  -moz-box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7);\n  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.7); }\n  footer .main-width {\n    height: 50px;\n    justify-content: space-between;\n    align-items: center; }\n    footer .main-width .footerLogo {\n      font-family: 'Patua One', sans-serif;\n      font-size: 26px;\n      margin: 0 0 0 20px; }\n    footer .main-width .copyrights {\n      font-size: 14px;\n      margin: 0 20px 0 0; }\n\n.socials {\n  width: 80px;\n  font-size: 32px;\n  display: flex;\n  justify-content: space-between; }\n  .socials .fa {\n    cursor: pointer; }\n    .socials .fa:hover {\n      color: #66686e; }\n\n.members {\n  background-color: #F2F2F2;\n  width: 120px; }\n  .members .member {\n    height: 40px;\n    margin: 10px 10px;\n    background-color: #A9A9A9;\n    display: flex;\n    justify-content: center;\n    line-height: 40px;\n    color: white;\n    cursor: pointer;\n    position: relative; }\n  .members .active-member {\n    background-color: #5F4B8B;\n    color: white; }\n    .members .active-member::before {\n      content: '';\n      display: block;\n      position: absolute;\n      border: 10px solid transparent;\n      border-left: 10px solid #5F4B8B;\n      right: -20px;\n      top: 10px; }\n\n.task.prior-low {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-low .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-low .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-low .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-low .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #bae19a; }\n    .task.prior-low .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-low .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-mid {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-mid .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-mid .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-mid .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-mid .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ffeead; }\n    .task.prior-mid .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-mid .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-high {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-high .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-high .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-high .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-high .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: #ff857d; }\n    .task.prior-high .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-high .task-info .task-description p {\n        font-weight: bold; }\n\n.task.prior-unDef {\n  font-size: 15px;\n  position: relative;\n  height: 90px;\n  margin: 10px 10px;\n  padding: 0 10px;\n  border-radius: 3px;\n  background-color: #f0f0f0;\n  -webkit-box-shadow: 1px 1px 3px 0 #858585;\n  -moz-box-shadow: 1px 1px 3px 0 #858585;\n  box-shadow: 1px 1px 3px 0 #858585; }\n  .task.prior-unDef .task-title {\n    border-bottom: 1px solid silver;\n    height: 40%;\n    cursor: move;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    z-index: 1; }\n    .task.prior-unDef .task-title span {\n      user-select: none;\n      z-index: 0; }\n  .task.prior-unDef .task-info {\n    display: flex;\n    padding: 5px 0 0 0; }\n    .task.prior-unDef .task-info .prior-level {\n      width: 10px;\n      height: 35px;\n      border-radius: 3px;\n      background-color: silver; }\n    .task.prior-unDef .task-info .task-description {\n      padding: 5px 10px; }\n      .task.prior-unDef .task-info .task-description p {\n        font-weight: bold; }\n\n.task.dragged {\n  -webkit-box-shadow: 0 0 65px 0 #858585;\n  -moz-box-shadow: 0 0 65px 0 #858585;\n  box-shadow: 0 0 65px 0 #858585;\n  z-index: 3;\n  margin: 0 10px; }\n\n.hidden {\n  height: 90px;\n  margin: 5px 10px;\n  border-radius: 5px;\n  border: 2px dashed #5f5f5f; }\n\n.board {\n  display: flex; }\n  .board .subBoards-container {\n    display: flex;\n    flex-grow: 1;\n    overflow: auto; }\n    .board .subBoards-container .board-sub {\n      width: 20%;\n      background-color: #ffffff;\n      border-right: 2px solid #e1e1e1; }\n\n.titles {\n  background-color: #54427a;\n  z-index: 1;\n  -webkit-box-shadow: 0 0 10px 0 #454545;\n  -moz-box-shadow: 0 0 10px 0 #454545;\n  box-shadow: 0 0 10px 0 #454545; }\n  .titles .title-container {\n    flex-grow: 1;\n    display: flex; }\n  .titles .title {\n    width: 20%;\n    height: 40px;\n    line-height: 40px;\n    color: white;\n    font-weight: bold;\n    font-size: 18px;\n    text-align: center; }\n    .titles .title.first {\n      width: 120px; }\n", ""]);
 
 // exports
 
@@ -28264,13 +28264,9 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _userBtn = __webpack_require__(252);
+var _menu = __webpack_require__(252);
 
-var _userBtn2 = _interopRequireDefault(_userBtn);
-
-var _menuBtn = __webpack_require__(253);
-
-var _menuBtn2 = _interopRequireDefault(_menuBtn);
+var _menu2 = _interopRequireDefault(_menu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28306,8 +28302,13 @@ var Header = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'nav-box' },
-                        _react2.default.createElement(_userBtn2.default, null),
-                        _react2.default.createElement(_menuBtn2.default, null)
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            'User ',
+                            _react2.default.createElement('i', { className: 'fa fa-user-o', 'aria-hidden': 'true' })
+                        ),
+                        _react2.default.createElement(_menu2.default, null)
                     )
                 )
             );
@@ -28344,35 +28345,76 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UserBtn = function (_React$Component) {
-    _inherits(UserBtn, _React$Component);
+var Menu = function (_React$Component) {
+    _inherits(Menu, _React$Component);
 
-    function UserBtn() {
-        _classCallCheck(this, UserBtn);
+    function Menu() {
+        var _ref;
 
-        return _possibleConstructorReturn(this, (UserBtn.__proto__ || Object.getPrototypeOf(UserBtn)).apply(this, arguments));
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, Menu);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Menu.__proto__ || Object.getPrototypeOf(Menu)).call.apply(_ref, [this].concat(args))), _this), _this.menuActive = false, _this.slideMenu = function (ev) {
+            var width = _this.menu.getBoundingClientRect().width;
+            _this.menuActive = !_this.menuActive;
+
+            if (_this.menuActive) {
+                var px = 0;
+                var interval = setInterval(function () {
+                    if (px === width) {
+                        clearInterval(interval);
+                    } else {
+                        _this.menu.style.transform = 'translateX(-' + (px += 16) + 'px)';
+                    }
+                }, 5);
+            } else {
+                var _px = width;
+                var _interval = setInterval(function () {
+                    if (_px === 0) {
+                        clearInterval(_interval);
+                    } else {
+                        _this.menu.style.transform = 'translateX(-' + (_px -= 16) + 'px)';
+                    }
+                }, 5);
+            }
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
-    _createClass(UserBtn, [{
+    _createClass(Menu, [{
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             return _react2.default.createElement(
-                'div',
-                { className: 'user-btn' },
+                'nav',
+                { className: 'menu' },
                 _react2.default.createElement(
-                    'span',
-                    null,
-                    'User'
+                    'div',
+                    { className: 'menu-btn', onClick: this.slideMenu },
+                    _react2.default.createElement('span', { className: 'icon-bar' }),
+                    _react2.default.createElement('span', { className: 'icon-bar' }),
+                    _react2.default.createElement('span', { className: 'icon-bar' })
                 ),
-                _react2.default.createElement('i', { className: 'fa fa-user-o user-logo', 'aria-hidden': 'true' })
+                _react2.default.createElement(
+                    'div',
+                    { className: 'menu-box', ref: function ref(rel) {
+                            _this2.menu = rel;
+                        } },
+                    'Under Constructions'
+                )
             );
         }
     }]);
 
-    return UserBtn;
+    return Menu;
 }(_react2.default.Component);
 
-exports.default = UserBtn;
+exports.default = Menu;
 
 /***/ }),
 /* 253 */
@@ -28391,59 +28433,7 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MenuBtn = function (_React$Component) {
-    _inherits(MenuBtn, _React$Component);
-
-    function MenuBtn() {
-        _classCallCheck(this, MenuBtn);
-
-        return _possibleConstructorReturn(this, (MenuBtn.__proto__ || Object.getPrototypeOf(MenuBtn)).apply(this, arguments));
-    }
-
-    _createClass(MenuBtn, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'a',
-                { className: 'menu-btn' },
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' })
-            );
-        }
-    }]);
-
-    return MenuBtn;
-}(_react2.default.Component);
-
-exports.default = MenuBtn;
-
-/***/ }),
-/* 254 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(6);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _socials = __webpack_require__(255);
+var _socials = __webpack_require__(254);
 
 var _socials2 = _interopRequireDefault(_socials);
 
@@ -28495,7 +28485,7 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 255 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28546,7 +28536,7 @@ var Socials = function (_React$Component) {
 exports.default = Socials;
 
 /***/ }),
-/* 256 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
