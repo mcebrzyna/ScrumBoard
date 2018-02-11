@@ -13,4 +13,4 @@ The app is constantly developed. In the near future I plan to:
   - add the ability to menage a few projects at the same time,
   - add login panel.
 
-available on [http://cebrzyna.ayz.pl/]
+The app is available [here](http://cebrzyna.ayz.pl/)
