@@ -2,7 +2,7 @@
 
 footer{
   background-color: $second-color;
-  color: lighten($second-color, 12%);
+  color: $footer-text;
   -webkit-box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
   -moz-box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
   box-shadow: 0 0 25px -3px rgba(0,0,0,0.7);
@@ -26,16 +26,30 @@ footer{
 }
 
 .socials{
-  width: 80px;
-  font-size: 32px;
+  height: 50px;
   display: flex;
   justify-content: space-between;
-
-  .fa{
-    cursor: pointer;
-
-    &:hover{
-      color: lighten($second-color, 20%);
-    }
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: $footer-text;
+  img{
+    height: 20px;
+    width: 20px;
+    margin: 0 10px 0 0;
+  }
+  .underline{
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    width: 0;
+    height: 2px;
+    background-color: $footer-text;
+    -webkit-transition: width 0.25s ;
+    transition: width 0.25s;
+  }
+  &:hover .underline{
+    width: 100%;
   }
 }
+

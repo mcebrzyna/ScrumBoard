@@ -14,13 +14,13 @@
 
     .subBoards-container{
       display: flex;
-      flex-grow: 1;
+      height: 100vh;
       overflow: auto;
 
       .board-sub {
         width: 20%;
         background-color: #ffffff;
-        border-right: 2px solid #e1e1e1;
+        border-right: 2px solid $border-subBoard;
       }
     }
 
