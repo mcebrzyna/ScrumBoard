@@ -1,9 +1,10 @@
 import React from 'react';
+import MenuBtn from "./menuBtn.jsx";
 
 class Menu extends React.Component{
     menuActive = false;
 
-    slideMenu = ev => {
+    slideMenu = () => {
         const width = this.menu.getBoundingClientRect().width;
         this.menuActive = !this.menuActive;
 
@@ -32,11 +33,7 @@ class Menu extends React.Component{
     render(){
         return (
             <nav className='menu'>
-                <div className='menu-btn' onClick={this.slideMenu}>
-                    <span className="icon-bar"/>
-                    <span className="icon-bar"/>
-                    <span className="icon-bar"/>
-                </div>
+                <MenuBtn slideMenu={this.slideMenu}/>
                 <div className='menu-box' ref={(rel) => { this.menu = rel;}}>
                     <img src="./img/user.svg"/>
                     <h2>Welcome John!</h2>
