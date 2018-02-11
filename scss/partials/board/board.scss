@@ -1,6 +1,14 @@
 @import "./members";
 @import "./task";
 
+//while loading
+.loading-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .board {
   display: flex;
 

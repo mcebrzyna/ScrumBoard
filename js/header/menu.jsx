@@ -13,9 +13,9 @@ class Menu extends React.Component{
                 if(px === width){
                     clearInterval(interval);
                 } else{
-                    this.menu.style.transform = `translateX(-${px+=16}px)`;
+                    this.menu.style.transform = `translateX(-${px+=20}px)`;
                 }
-            }, 5);
+            }, 6);
         }
         else{
             let px = width;
@@ -23,9 +23,9 @@ class Menu extends React.Component{
                 if(px === 0){
                     clearInterval(interval);
                 } else{
-                    this.menu.style.transform = `translateX(-${px-=16}px)`;
+                    this.menu.style.transform = `translateX(-${px-=20}px)`;
                 }
-            }, 5);
+            }, 6);
         }
     };
 
@@ -38,7 +38,8 @@ class Menu extends React.Component{
                     <span className="icon-bar"/>
                 </div>
                 <div className='menu-box' ref={(rel) => { this.menu = rel;}}>
-                    Under Constructions
+                    <img src="./img/user.svg"/>
+                    <h2>Welcome John!</h2>
                 </div>
             </nav>
         )

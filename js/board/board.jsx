@@ -1,6 +1,7 @@
 import React from 'react';
 import SubBoard from './subBoard.jsx'
 import Members from './members.jsx'
+import Loader from '../other/loader.jsx'
 
 
 class Board extends React.Component{
@@ -250,7 +251,11 @@ class Board extends React.Component{
         });
 
         if(!this.state.loaded){
-            return <div>Loading</div>}
+            return(
+                <div className='loading-box'>
+                    <Loader/>
+                </div>)
+        }
 
         return (
             <section className='board' ref={(rel) => { this.boards = rel;}}>

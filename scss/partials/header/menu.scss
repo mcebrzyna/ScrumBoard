@@ -20,11 +20,25 @@
     }
   }
 }
+
 .menu-box{
-  height: 400px;
-  width: 400px;
-  background: $second-color;
+  width: 500px;
+  height: calc(100vh - 120px);
+  background: darken($second-color, 5%);
   position: absolute;
   top: 70px;
   left: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+
+  img{
+    margin: 30px auto 15px auto;
+    width: 120px;
+  }
+  h2{
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 300;
+  }
 }

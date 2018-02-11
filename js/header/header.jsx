@@ -9,7 +9,7 @@ class Header extends React.Component{
                 <div className='main-width'>
                     <div className='logo'>ScrumBoard.</div>
                     <div className='nav-box'>
-                        <div>User <i className="fa fa-user-o" aria-hidden="true"/></div>
+                        <div><span>John Doe</span><img src="./img/user.svg"/></div>
                         <Menu/>
                     </div>
                 </div>
